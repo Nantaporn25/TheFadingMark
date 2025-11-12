@@ -9,6 +9,7 @@ public class InventoryManager : MonoBehaviour
 
     [Header("UI References")]
     public Button[] leftButtons;
+    public Image[] leftHighlights; // ไฮไลต์ช่อง
     public Image[] leftIcons;
     public GameObject dialoguePanel;
     public TextMeshProUGUI dialogueText;
@@ -39,8 +40,23 @@ public class InventoryManager : MonoBehaviour
         InitializeUI();
     }
 
+    void Update()
+    {
+        // กดปุ่ม 1-3 เพื่อเลือกช่อง
+        if (Input.GetKeyDown(KeyCode.Alpha1)) SelectButton(0);
+        else if (Input.GetKeyDown(KeyCode.Alpha2)) SelectButton(1);
+        else if (Input.GetKeyDown(KeyCode.Alpha3)) SelectButton(2);
+    }
+
     void InitializeUI()
     {
+        // ปิดไฮไลต์ทั้งหมดตอนเริ่ม
+        if (leftHighlights != null)
+        {
+            foreach (var h in leftHighlights)
+                if (h != null) h.enabled = false;
+        }
+
         if (leftButtons != null)
         {
             for (int i = 0; i < leftButtons.Length; i++)
@@ -59,6 +75,15 @@ public class InventoryManager : MonoBehaviour
     void SelectButton(int index)
     {
         selectedIndex = index;
+
+        if (leftHighlights != null)
+        {
+            for (int i = 0; i < leftHighlights.Length; i++)
+            {
+                if (leftHighlights[i] != null)
+                    leftHighlights[i].enabled = (i == selectedIndex);
+            }
+        }
     }
 
     void UpdateButtonIcon(int index)
