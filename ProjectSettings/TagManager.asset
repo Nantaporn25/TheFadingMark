@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Manager
   - SpawnPoint
+  - InventoryButton
+  - InventoryHighlight
+  - InventoryIcon
   layers:
   - Default
   - TransparentFX
