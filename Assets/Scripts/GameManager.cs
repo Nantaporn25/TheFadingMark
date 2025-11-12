@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // คงอยู่ข้าม Scene
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator LoadSceneCoroutine(string sceneName)
     {
-        yield return null; // รอ frame
+        yield return null;
         SceneManager.LoadScene(sceneName);
     }
 }
