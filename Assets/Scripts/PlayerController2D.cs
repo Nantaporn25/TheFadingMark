@@ -1,25 +1,26 @@
 ﻿using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController2D : MonoBehaviour
 {
     public float moveSpeed = 3f;
     private Rigidbody2D rb;
     private Vector2 moveInput;
 
-    void Awake()
+     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        DontDestroyOnLoad(gameObject); // Player อยู่รอดทุกซีน
+        DontDestroyOnLoad(gameObject); // Player อยู่รอดข้าม Scene
     }
 
-    void Update()
+
+    private void Update()
     {
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
         moveInput.Normalize();
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         rb.MovePosition(rb.position + moveInput * moveSpeed * Time.fixedDeltaTime);
     }
