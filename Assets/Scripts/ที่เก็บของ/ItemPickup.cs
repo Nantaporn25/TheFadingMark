@@ -1,9 +1,9 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ItemPickup : MonoBehaviour
 {
-    public Item itemData;
-    public bool isPaper = false;
+    public Item itemData;               // ไอเท็มทั่วไป
+    public bool isPaper = false;        // กรณีเป็นกระดาษ
     public Sprite paperSprite;
 
     private void OnTriggerStay2D(Collider2D other)
@@ -12,6 +12,7 @@ public class ItemPickup : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
+            // กรณีเป็นกระดาษ
             if (isPaper)
             {
                 if (PaperManager.instance != null)
@@ -20,7 +21,8 @@ public class ItemPickup : MonoBehaviour
                     Destroy(gameObject);
                 }
             }
-            else
+            // กรณีเป็นไอเท็มทั่วไป
+            else if (itemData != null)
             {
                 if (InventoryManager.instance != null)
                 {

@@ -9,6 +9,7 @@ TagManager:
   - InventoryButton
   - InventoryHighlight
   - InventoryIcon
+  - HideSpot
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Player
+  - Obstruction
   - 
   - 
   - 

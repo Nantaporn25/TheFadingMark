@@ -18,6 +18,7 @@ public class InventoryManager : MonoBehaviour
     public Item[] leftItems; // 3 ช่องเก็บของ
 
     private int selectedIndex = -1;
+    public int SelectedIndex => selectedIndex;
 
     void Awake()
     {
@@ -85,14 +86,19 @@ public class InventoryManager : MonoBehaviour
             }
         }
     }
-
-    void UpdateButtonIcon(int index)
+    public int GetSelectedIndex()
     {
+        return selectedIndex;
+    }
+    public void UpdateButtonIcon(int index)
+    {
+
         if (leftIcons == null || leftIcons.Length <= index) return;
         if (leftItems != null && leftItems.Length > index && leftItems[index] != null)
             leftIcons[index].sprite = leftItems[index].icon;
         else
             leftIcons[index].sprite = null;
+
     }
 
     public bool PickupItem(Item newItem)
