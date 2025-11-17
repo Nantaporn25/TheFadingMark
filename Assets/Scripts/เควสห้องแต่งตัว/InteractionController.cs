@@ -3,15 +3,12 @@ using UnityEngine;
 
 public class InteractionController : MonoBehaviour
 {
-    [Header("UI & Interaction")]
     private bool dialogActive = false;
-
-    [Header("หุ่นที่อยู่ใกล้ผู้เล่น")]
     public List<Mannequin> mannequinsInRange = new List<Mannequin>();
 
     void Update()
     {
-        // --- กด C เพื่อแสดงไดอะล็อกหรือใส่สร้อย ---
+        // --- กด C เพื่อคุย/ใส่สร้อย ---
         if (Input.GetKeyDown(KeyCode.C))
         {
             Mannequin target = GetClosestMannequin();
@@ -25,11 +22,8 @@ public class InteractionController : MonoBehaviour
             else
             {
                 EquipNecklaceToMannequin(target);
-
-                // ตรวจสอบหุ่นทุกตัวผ่าน MainMannequin (เวอร์ชันใหม่)
-                MainMannequin main = Object.FindFirstObjectByType<MainMannequin>();
-                if (main != null)
-                    main.CheckAllMannequins();
+                dialogActive = false;
+                target.StopDialog();
             }
         }
 
@@ -43,7 +37,7 @@ public class InteractionController : MonoBehaviour
             dialogActive = false;
         }
 
-        // --- กด R เพื่อนำสร้อยออก ---
+        // --- กด R เพื่อถอดสร้อย ---
         if (Input.GetKeyDown(KeyCode.R))
         {
             Mannequin target = GetClosestMannequin();
@@ -52,22 +46,14 @@ public class InteractionController : MonoBehaviour
         }
     }
 
-    // ----------------- ใส่สร้อย -----------------
+    // ====== ใส่สร้อย ======
     void EquipNecklaceToMannequin(Mannequin target)
     {
         int index = InventoryManager.instance.GetSelectedIndex();
-        if (index < 0)
-        {
-            Debug.Log("ยังไม่ได้เลือกช่อง 1-3");
-            return;
-        }
+        if (index < 0) return;
 
         Item item = InventoryManager.instance.leftItems[index];
-        if (item == null)
-        {
-            Debug.Log("ช่องนี้ไม่มีไอเท็ม");
-            return;
-        }
+        if (item == null) return;
 
         target.Equip(item);
 
@@ -77,18 +63,15 @@ public class InteractionController : MonoBehaviour
         Debug.Log($"✔ ใส่สร้อยให้ {target.characterName} เรียบร้อย");
     }
 
-    // ----------------- เอาสร้อยออก -----------------
+    // ====== ถอดสร้อย ======
     void RemoveNecklaceFromMannequin(Mannequin target)
     {
         Item removed = target.RemoveNecklace();
         if (removed != null)
-        {
             InventoryManager.instance.PickupItem(removed);
-            Debug.Log($"นำสร้อยออกจาก {target.characterName} และคืนเข้ากระเป๋าแล้ว");
-        }
     }
 
-    // ----------------- เลือกหุ่นใกล้ผู้เล่นที่สุด -----------------
+    // ====== หาเป้าหมายที่ใกล้ที่สุด ======
     private Mannequin GetClosestMannequin()
     {
         float minDist = float.MaxValue;
@@ -98,6 +81,7 @@ public class InteractionController : MonoBehaviour
         {
             if (m == null) continue;
             float dist = Vector3.Distance(transform.position, m.transform.position);
+
             if (dist < minDist)
             {
                 minDist = dist;
@@ -108,23 +92,22 @@ public class InteractionController : MonoBehaviour
         return closest;
     }
 
-    // ----------------- Trigger เข้า/ออก -----------------
-    private void OnTriggerEnter(Collider other)
+    // ====== Trigger 2D ======
+    private void OnTriggerEnter2D(Collider2D other)
     {
         Mannequin m = other.GetComponent<Mannequin>();
         if (m != null && !mannequinsInRange.Contains(m))
             mannequinsInRange.Add(m);
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit2D(Collider2D other)
     {
         Mannequin m = other.GetComponent<Mannequin>();
         if (m != null)
         {
             mannequinsInRange.Remove(m);
             m.StopDialog();
-            if (dialogActive)
-                dialogActive = false;
+            dialogActive = false;
         }
     }
 }

@@ -6285,9 +6285,12 @@ MonoBehaviour:
   mannequins:
   - {fileID: 989055628}
   - {fileID: 1437284238}
-  - {fileID: 1684863751}
-  - {fileID: 428464624}
-  - {fileID: 479330210}
+  dialogBox: {fileID: 932758770}
+  profileImageUI: {fileID: 18000911}
+  nameTextUI: {fileID: 1457714270}
+  dialogTextUI: {fileID: 1393458207}
+  profileImage: {fileID: 6134329104055096905, guid: d47553346f56e0747bcfeeb54ddb3a98, type: 3}
+  npcName: "\u0E2B\u0E31\u0E27\u0E2B\u0E19\u0E49\u0E32\u0E2B\u0E38\u0E48\u0E19"
 --- !u!1 &1746538861
 GameObject:
   m_ObjectHideFlags: 0
