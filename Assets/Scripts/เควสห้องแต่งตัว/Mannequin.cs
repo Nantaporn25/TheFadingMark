@@ -1,25 +1,78 @@
 ﻿using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class Mannequin : MonoBehaviour
 {
-    public string desiredColor;
-    public Item currentNecklace;
+    [Header("ข้อมูลตัวละคร")]
+    public Sprite profileImage;
+    public string characterName;
 
-    public bool IsCorrect => currentNecklace != null && currentNecklace.colorName == desiredColor;
+    [Header("ประโยคไดอาล็อกของตัวละครนี้")]
+    [TextArea(2, 5)]
+    public string[] dialogLines;
 
-    public void EquipNecklace(Item item)
+    [Header("ความต้องการของหุ่น")]
+    public string desiredColor;          // เช่น "Red", "Blue", "Green"
+    public Item equippedNecklace;        // สร้อยที่ใส่อยู่ตอนนี้
+
+    [Header("สถานะเควส")]
+    public bool IsCorrect = false;       // <-- ตัวนี้คือที่ MainMannequin ต้องใช้
+
+    [Header("UI อ้างอิง")]
+    public GameObject dialogBox;
+    public Image profileImageUI;
+    public TextMeshProUGUI nameTextUI;
+    public TextMeshProUGUI dialogTextUI;
+
+    private int dialogIndex = 0;
+
+    // ------------------------- แสดงไดอาล็อก -------------------------
+    public void StartDialog()
     {
-        if (item == null) return;
-        currentNecklace = item;
-        Debug.Log($"✅ ใส่สร้อย '{item.itemName}' ให้หุ่นที่ต้องการสี {desiredColor}");
+        if (dialogLines == null || dialogLines.Length == 0) return;
+
+        dialogBox.SetActive(true);
+
+        if (profileImageUI != null)
+            profileImageUI.sprite = profileImage;
+
+        if (nameTextUI != null)
+            nameTextUI.text = characterName;
+
+        dialogIndex = 0;
+        dialogTextUI.text = dialogLines[dialogIndex];
     }
 
+    public void StopDialog()
+    {
+        dialogBox.SetActive(false);
+    }
+
+    // ------------------- ใส่สร้อย + ตรวจถูกผิด -------------------
+    public void Equip(Item necklace)
+    {
+        equippedNecklace = necklace;
+
+        // ตรวจว่าไอเท็มถูกสีไหม
+        if (necklace != null && necklace.itemName == desiredColor)
+        {
+            IsCorrect = true;
+            Debug.Log($"{name} ✔ ใส่สีถูกต้องแล้ว");
+        }
+        else
+        {
+            IsCorrect = false;
+            Debug.Log($"{name} ✖ สีไม่ถูกต้อง");
+        }
+    }
+
+    // ------------------- เอาสร้อยออก -------------------
     public Item RemoveNecklace()
     {
-        Item removed = currentNecklace;
-        currentNecklace = null;
-        if (removed != null)
-            Debug.Log($"❌ เอาสร้อย '{removed.itemName}' ออกจากหุ่น");
+        Item removed = equippedNecklace;
+        equippedNecklace = null;
+        IsCorrect = false;
         return removed;
     }
 }
