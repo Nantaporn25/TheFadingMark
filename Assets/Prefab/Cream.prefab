@@ -332,6 +332,7 @@ GameObject:
   - component: {fileID: 3432444331414333577}
   - component: {fileID: 2013434694802092535}
   - component: {fileID: 5679442997601633123}
+  - component: {fileID: 137070381000932187}
   - component: {fileID: 2883135373945263910}
   - component: {fileID: 3044165395498917923}
   m_Layer: 8
@@ -487,6 +488,28 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &137070381000932187
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4817882422684868962}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 949b575be19c2c24aa19d3e51ec2386f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &2883135373945263910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -499,8 +522,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e54b3b48e4f53843b9cfd4079fb4af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 137070381000932187}
   moveSpeed: 10
-  flashlight: {fileID: 0}
+  flashlight: {fileID: 5180173360953667471}
   canMove: 1
   interactionRange: 2
 --- !u!114 &3044165395498917923

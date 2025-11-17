@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController2D : MonoBehaviour
 {
-    //public Animator anim;
+    public Animator anim;
     public float moveSpeed;
     private Rigidbody2D rb;
     private SpriteRenderer sr;
@@ -38,7 +38,7 @@ public class PlayerController2D : MonoBehaviour
         if (!canMove)
         {
             rb.linearVelocity = Vector2.zero;
-            //anim.SetBool("Moving", false);
+            anim.SetBool("Moving", false);
             return;
         }
 
@@ -57,7 +57,7 @@ public class PlayerController2D : MonoBehaviour
         if (hiding)
         {
             rb.linearVelocity = Vector2.zero;
-            //anim.SetBool("Moving", false);
+            anim.SetBool("Moving", false);
             return;
         }
 
@@ -101,10 +101,10 @@ public class PlayerController2D : MonoBehaviour
         moving = input.magnitude > 0.1f;
         if (moving)
         {
-            //anim.SetFloat("X", x);
-            //anim.SetFloat("Y", y);
+            anim.SetFloat("X", x);
+            anim.SetFloat("Y", y);
         }
-        //anim.SetBool("Moving", moving);
+        anim.SetBool("Moving", moving);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
