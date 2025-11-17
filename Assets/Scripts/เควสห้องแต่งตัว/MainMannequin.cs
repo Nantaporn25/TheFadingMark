@@ -2,7 +2,7 @@
 
 public class MainMannequin : MonoBehaviour
 {
-    public Mannequin[] mannequins; // 5 ตัว
+    public Mannequin[] mannequins; // หุ่นทั้งหมด
 
     public void CheckAllMannequins()
     {
@@ -10,17 +10,17 @@ public class MainMannequin : MonoBehaviour
         {
             if (!m.IsCorrect)
             {
-                Debug.Log("❌ ใส่ผิด มีหุ่นอย่างน้อย 1 ตัวไม่ถูกต้อง");
+                Debug.Log("❌ มีหุ่นอย่างน้อย 1 ตัวใส่สีผิด");
                 return;
             }
         }
 
-        Debug.Log("🎉 ใส่ถูกต้องทั้งหมด! ให้รางวัลผู้เล่น");
+        Debug.Log("🎉 ถูกต้องทั้งหมด! ปล่อยของรางวัล");
         GiveReward();
     }
 
     void GiveReward()
     {
-        // ใส่โค้ดให้รางวัล เช่น item ใหม่, achievement, dialog ฯลฯ
+        // ทำอะไรก็ว่าไป เช่น เปิดประตู, item ใหม่
     }
 }

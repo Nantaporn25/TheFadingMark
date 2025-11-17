@@ -1,45 +1,59 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class InteractionController : MonoBehaviour
 {
-    public Mannequin currentMannequin;
+    [Header("UI & Interaction")]
     private bool dialogActive = false;
+
+    [Header("หุ่นที่อยู่ใกล้ผู้เล่น")]
+    public List<Mannequin> mannequinsInRange = new List<Mannequin>();
 
     void Update()
     {
-        if (currentMannequin == null) return;
-
-        // --- กด E เพื่อแสดงหรือใส่สร้อย ---
+        // --- กด C เพื่อแสดงไดอะล็อกหรือใส่สร้อย ---
         if (Input.GetKeyDown(KeyCode.C))
         {
+            Mannequin target = GetClosestMannequin();
+            if (target == null) return;
+
             if (!dialogActive)
             {
-                // แสดงไดอาล็อกก่อน
-                currentMannequin.StartDialog();
+                target.StartDialog();
                 dialogActive = true;
             }
             else
             {
-                // ถ้าไดอาล็อกถูกปิดไปแล้ว → ใส่สร้อย
-                EquipNecklaceToMannequin();
+                EquipNecklaceToMannequin(target);
+
+                // ตรวจสอบหุ่นทุกตัวผ่าน MainMannequin (เวอร์ชันใหม่)
+                MainMannequin main = Object.FindFirstObjectByType<MainMannequin>();
+                if (main != null)
+                    main.CheckAllMannequins();
             }
         }
 
-        // --- กด Enter เพื่อปิดไดอาล็อก ---
+        // --- กด Enter เพื่อปิดไดอะล็อก ---
         if (dialogActive && Input.GetKeyDown(KeyCode.Return))
         {
-            currentMannequin.StopDialog();
+            Mannequin target = GetClosestMannequin();
+            if (target != null)
+                target.StopDialog();
+
             dialogActive = false;
         }
 
         // --- กด R เพื่อนำสร้อยออก ---
         if (Input.GetKeyDown(KeyCode.R))
         {
-            RemoveNecklaceFromMannequin();
+            Mannequin target = GetClosestMannequin();
+            if (target != null)
+                RemoveNecklaceFromMannequin(target);
         }
     }
 
-    void EquipNecklaceToMannequin()
+    // ----------------- ใส่สร้อย -----------------
+    void EquipNecklaceToMannequin(Mannequin target)
     {
         int index = InventoryManager.instance.GetSelectedIndex();
         if (index < 0)
@@ -55,39 +69,62 @@ public class InteractionController : MonoBehaviour
             return;
         }
 
-        currentMannequin.Equip(item);
+        target.Equip(item);
 
         InventoryManager.instance.leftItems[index] = null;
         InventoryManager.instance.UpdateButtonIcon(index);
 
-        Debug.Log("✔ ใส่สร้อยให้หุ่นเรียบร้อย");
+        Debug.Log($"✔ ใส่สร้อยให้ {target.characterName} เรียบร้อย");
     }
 
-    void RemoveNecklaceFromMannequin()
+    // ----------------- เอาสร้อยออก -----------------
+    void RemoveNecklaceFromMannequin(Mannequin target)
     {
-        Item removed = currentMannequin.RemoveNecklace();
+        Item removed = target.RemoveNecklace();
         if (removed != null)
         {
             InventoryManager.instance.PickupItem(removed);
-            Debug.Log("นำสร้อยออกและคืนเข้ากระเป๋าแล้ว");
+            Debug.Log($"นำสร้อยออกจาก {target.characterName} และคืนเข้ากระเป๋าแล้ว");
         }
     }
 
+    // ----------------- เลือกหุ่นใกล้ผู้เล่นที่สุด -----------------
+    private Mannequin GetClosestMannequin()
+    {
+        float minDist = float.MaxValue;
+        Mannequin closest = null;
+
+        foreach (var m in mannequinsInRange)
+        {
+            if (m == null) continue;
+            float dist = Vector3.Distance(transform.position, m.transform.position);
+            if (dist < minDist)
+            {
+                minDist = dist;
+                closest = m;
+            }
+        }
+
+        return closest;
+    }
+
+    // ----------------- Trigger เข้า/ออก -----------------
     private void OnTriggerEnter(Collider other)
     {
         Mannequin m = other.GetComponent<Mannequin>();
-        if (m != null)
-            currentMannequin = m;
+        if (m != null && !mannequinsInRange.Contains(m))
+            mannequinsInRange.Add(m);
     }
 
     private void OnTriggerExit(Collider other)
     {
         Mannequin m = other.GetComponent<Mannequin>();
-        if (m != null && currentMannequin == m)
+        if (m != null)
         {
-            currentMannequin.StopDialog();
-            currentMannequin = null;
-            dialogActive = false;
+            mannequinsInRange.Remove(m);
+            m.StopDialog();
+            if (dialogActive)
+                dialogActive = false;
         }
     }
 }
