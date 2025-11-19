@@ -1,40 +1,40 @@
 fileFormatVersion: 2
-guid: 66a10cf423f83e847b5745eb2adf1bb5
+guid: 919c366aa5181fd49b3e872fdf4e1742
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1801091190616261861
-    second: IMG_0964_0
+      213: -79486742330834086
+    second: necklace-outline_0
   - first:
-      213: -3669486178423108304
-    second: IMG_0964_1
+      213: -3591459598635600678
+    second: necklace-outline_1
   - first:
-      213: 8171081238867887908
-    second: IMG_0964_2
+      213: -2468209741511900084
+    second: necklace-outline_2
   - first:
-      213: -7172693962471493156
-    second: IMG_0964_3
+      213: 1658706404654356313
+    second: necklace-outline_3
   - first:
-      213: 219123958303923810
-    second: IMG_0964_4
+      213: -2502258141305122646
+    second: necklace-outline_4
   - first:
-      213: -7328477579307789094
-    second: IMG_0964_5
+      213: -1110271782463951038
+    second: necklace-outline_5
   - first:
-      213: -4926976923685654755
-    second: IMG_0964_6
+      213: -3476097969488877061
+    second: necklace-outline_6
   - first:
-      213: 290559558266361913
-    second: IMG_0964_7
+      213: -4412622659412690188
+    second: necklace-outline_7
   - first:
-      213: 887123285106645527
-    second: IMG_0964_8
+      213: 2048641332808606942
+    second: necklace-outline_8
   - first:
-      213: -902519370310216610
-    second: IMG_0964_9
+      213: 2377187028811356453
+    second: necklace-outline_9
   - first:
-      213: 8928632437353584104
-    second: IMG_0964_10
+      213: 7719571366847772420
+    second: necklace-outline_10
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -130,13 +130,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_0964_0
+      name: necklace-outline_0
       rect:
         serializedVersion: 2
-        x: 117
-        y: 960
-        width: 88
-        height: 100
+        x: 111
+        y: 955
+        width: 99
+        height: 111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,42 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b1b7b3fca1d3107e0800000000000000
-      internalID: -1801091190616261861
+      spriteID: a53840f9a3b95eef0800000000000000
+      internalID: -79486742330834086
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0964_1
+      name: necklace-outline_1
       rect:
         serializedVersion: 2
-        x: 255
-        y: 960
-        width: 88
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 03d82e233cd531dc0800000000000000
-      internalID: -3669486178423108304
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IMG_0964_2
-      rect:
-        serializedVersion: 2
-        x: 381
+        x: 251
         y: 957
-        width: 88
-        height: 103
+        width: 95
+        height: 107
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,20 +167,42 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 42744913813856170800000000000000
-      internalID: 8171081238867887908
+      spriteID: ad4782ef582982ec0800000000000000
+      internalID: -3591459598635600678
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0964_3
+      name: necklace-outline_2
       rect:
         serializedVersion: 2
-        x: 516
+        x: 376
+        y: 953
+        width: 98
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c44460631582fbdd0800000000000000
+      internalID: -2468209741511900084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: necklace-outline_3
+      rect:
+        serializedVersion: 2
+        x: 511
         y: 965
-        width: 88
-        height: 95
+        width: 98
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,20 +211,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cd13c4cf7d8757c90800000000000000
-      internalID: -7172693962471493156
+      spriteID: 9579614dfa8e40710800000000000000
+      internalID: 1658706404654356313
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0964_4
+      name: necklace-outline_4
       rect:
         serializedVersion: 2
-        x: 647
-        y: 965
-        width: 88
-        height: 95
+        x: 641
+        y: 961
+        width: 99
+        height: 104
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -233,20 +233,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 26e9b70441c7a0300800000000000000
-      internalID: 219123958303923810
+      spriteID: aa0dd2f5a71364dd0800000000000000
+      internalID: -2502258141305122646
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0964_5
+      name: necklace-outline_5
       rect:
         serializedVersion: 2
-        x: 146
-        y: 802
-        width: 34
-        height: 31
+        x: 142
+        y: 798
+        width: 41
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,20 +255,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ad4d1f438740c4a90800000000000000
-      internalID: -7328477579307789094
+      spriteID: 24fa81242b58790f0800000000000000
+      internalID: -1110271782463951038
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0964_6
+      name: necklace-outline_6
       rect:
         serializedVersion: 2
-        x: 273
-        y: 802
-        width: 34
-        height: 31
+        x: 266
+        y: 796
+        width: 47
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,20 +277,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d1f6b27979cdf9bb0800000000000000
-      internalID: -4926976923685654755
+      spriteID: bf9a82c505b62cfc0800000000000000
+      internalID: -3476097969488877061
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0964_7
+      name: necklace-outline_7
       rect:
         serializedVersion: 2
-        x: 412
-        y: 802
-        width: 34
-        height: 31
+        x: 409
+        y: 799
+        width: 40
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,20 +299,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9389f88f066480400800000000000000
-      internalID: 290559558266361913
+      spriteID: 4fafdd1021733c2c0800000000000000
+      internalID: -4412622659412690188
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0964_8
+      name: necklace-outline_8
       rect:
         serializedVersion: 2
-        x: 540
-        y: 802
-        width: 34
-        height: 32
+        x: 535
+        y: 799
+        width: 43
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,20 +321,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 71a52c87de1bf4c00800000000000000
-      internalID: 887123285106645527
+      spriteID: ed46d32207c3e6c10800000000000000
+      internalID: 2048641332808606942
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0964_9
+      name: necklace-outline_9
       rect:
         serializedVersion: 2
-        x: 673
-        y: 809
-        width: 34
-        height: 29
+        x: 668
+        y: 804
+        width: 43
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -343,14 +343,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e5410c91a6b9973f0800000000000000
-      internalID: -902519370310216610
+      spriteID: 52997f002077df020800000000000000
+      internalID: 2377187028811356453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0964_10
+      name: necklace-outline_10
       rect:
         serializedVersion: 2
         x: 649
@@ -365,8 +365,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8e59d7655efd8eb70800000000000000
-      internalID: 8928632437353584104
+      spriteID: 407fc33124d612b60800000000000000
+      internalID: 7719571366847772420
       vertices: []
       indices: 
       edges: []
@@ -385,17 +385,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      IMG_0964_0: -1801091190616261861
-      IMG_0964_1: -3669486178423108304
-      IMG_0964_10: 8928632437353584104
-      IMG_0964_2: 8171081238867887908
-      IMG_0964_3: -7172693962471493156
-      IMG_0964_4: 219123958303923810
-      IMG_0964_5: -7328477579307789094
-      IMG_0964_6: -4926976923685654755
-      IMG_0964_7: 290559558266361913
-      IMG_0964_8: 887123285106645527
-      IMG_0964_9: -902519370310216610
+      necklace-outline_0: -79486742330834086
+      necklace-outline_1: -3591459598635600678
+      necklace-outline_10: 7719571366847772420
+      necklace-outline_2: -2468209741511900084
+      necklace-outline_3: 1658706404654356313
+      necklace-outline_4: -2502258141305122646
+      necklace-outline_5: -1110271782463951038
+      necklace-outline_6: -3476097969488877061
+      necklace-outline_7: -4412622659412690188
+      necklace-outline_8: 2048641332808606942
+      necklace-outline_9: 2377187028811356453
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
