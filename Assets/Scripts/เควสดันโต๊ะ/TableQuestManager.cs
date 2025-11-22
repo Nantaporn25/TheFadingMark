@@ -2,13 +2,18 @@
 
 public class TableQuestManager : MonoBehaviour
 {
-    public GridPushableTable[] tables; // โต๊ะทั้งหมดในฉาก
+    public GridPushableTable[] tables;
 
     private bool questCompleted = false;
 
+    public string[] completeDialog = {
+        "สุดยอด! โต๊ะทั้งหมดถูกวางอย่างถูกต้องแล้ว!",
+        "ต่อไปเรามีงานอื่นให้ทำอีกนะ!"
+    };
+
     void Update()
     {
-        if (questCompleted) return; // เควสแล้วเสร็จแล้ว
+        if (questCompleted) return;
 
         bool allPlaced = true;
 
@@ -24,8 +29,15 @@ public class TableQuestManager : MonoBehaviour
         if (allPlaced)
         {
             questCompleted = true;
-            Debug.Log("เควสสำเร็จ! โต๊ะทั้งหมดวางถูกตำแหน่งแล้ว");
-            // สามารถเรียกฟังก์ชันอื่นต่อ เช่น เปิดประตู, ให้รางวัล ฯลฯ
+            TriggerQuestComplete();
         }
+    }
+
+    private void TriggerQuestComplete()
+    {
+        Debug.Log("Quest Completed!");
+
+        // เรียกแสดงไดอะล็อก
+        QuestDialog.instance.StartDialog();
     }
 }
