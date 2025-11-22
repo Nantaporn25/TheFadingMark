@@ -12,12 +12,12 @@ public class Mannequin : MonoBehaviour
     [TextArea(2, 5)]
     public string[] dialogLines;
 
-    [Header("ความต้องการของหุ่น")]
+    [Header("ความต้องการของหุ่น (สีที่ถูกต้อง)")]
     public string desiredColor;          // เช่น "Red", "Blue", "Green"
     public Item equippedNecklace;        // สร้อยที่ใส่อยู่ตอนนี้
 
     [Header("สถานะเควส")]
-    public bool IsCorrect = false;       // <-- ตัวนี้คือที่ MainMannequin ต้องใช้
+    public bool IsCorrect = false;       // <-- MainMannequin ต้องใช้ตัวนี้
 
     [Header("UI อ้างอิง")]
     public GameObject dialogBox;
@@ -49,30 +49,30 @@ public class Mannequin : MonoBehaviour
         dialogBox.SetActive(false);
     }
 
-    // ------------------- ใส่สร้อย + ตรวจถูกผิด -------------------
+    // ------------------- ใส่สร้อย + Spawn Prefab -------------------
     public void Equip(Item necklace)
     {
         equippedNecklace = necklace;
 
         // ตรวจว่าไอเท็มถูกสีไหม
         if (necklace != null && necklace.itemName == desiredColor)
-        {
-            IsCorrect = true;
-            Debug.Log($"{name} ✔ ใส่สีถูกต้องแล้ว");
+        { 
+            IsCorrect = true; Debug.Log($"{name} ✔ ใส่สีถูกต้องแล้ว"); 
         }
-        else
+        else 
         {
-            IsCorrect = false;
-            Debug.Log($"{name} ✖ สีไม่ถูกต้อง");
+            IsCorrect = false; Debug.Log($"{name} ✖ สีไม่ถูกต้อง"); 
         }
     }
 
     // ------------------- เอาสร้อยออก -------------------
     public Item RemoveNecklace()
     {
+
         Item removed = equippedNecklace;
         equippedNecklace = null;
         IsCorrect = false;
+
         return removed;
     }
 }
