@@ -167,6 +167,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: red
-  icon: {fileID: -1801091190616261861, guid: 66a10cf423f83e847b5745eb2adf1bb5, type: 3}
+  icon: {fileID: 9130784884593591570, guid: 1f5583324dd58d14a802ce04949085d2, type: 3}
   alertIcon: {fileID: 0}
   isPlayerNearby: 0

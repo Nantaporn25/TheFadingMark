@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2567117767999396282}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.449884, y: -9.405617, z: -0.0018870881}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -167,6 +167,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: green
-  icon: {fileID: 8171081238867887908, guid: 66a10cf423f83e847b5745eb2adf1bb5, type: 3}
+  icon: {fileID: 9130784884593591570, guid: 1f5583324dd58d14a802ce04949085d2, type: 3}
   alertIcon: {fileID: 0}
   isPlayerNearby: 0
