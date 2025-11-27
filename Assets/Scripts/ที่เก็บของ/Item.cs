@@ -3,9 +3,10 @@
 [System.Serializable]
 public class Item
 {
-    public string itemName;   // ชื่อไอเท็ม
-    public Sprite icon;       // ไอคอน
-    public string colorName;  // สีที่ใช้เช็ค
+    public string itemName;    // ชื่อไอเท็ม
+    public Sprite icon;        // ไอคอน UI ช่องเก็บ
+    public string colorName;   // สีของสร้อย
+    public Sprite worldSprite; // ไอคอนที่จะไปแสดงบนหุ่น / โลกจริง
 
     public Item Clone()
     {
@@ -13,7 +14,8 @@ public class Item
         {
             itemName = this.itemName,
             icon = this.icon,
-            colorName = this.colorName
+            colorName = this.colorName,
+            worldSprite = this.worldSprite
         };
     }
 }

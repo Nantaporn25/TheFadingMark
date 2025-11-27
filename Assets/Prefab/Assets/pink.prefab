@@ -106,6 +106,7 @@ MonoBehaviour:
     itemName: pink
     icon: {fileID: -2502258141305122646, guid: 919c366aa5181fd49b3e872fdf4e1742, type: 3}
     colorName: pink
+    worldSprite: {fileID: 2377187028811356453, guid: 919c366aa5181fd49b3e872fdf4e1742, type: 3}
   isPaper: 0
   paperSprite: {fileID: 0}
 --- !u!61 &633180347463544299

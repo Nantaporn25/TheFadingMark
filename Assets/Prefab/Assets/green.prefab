@@ -106,6 +106,7 @@ MonoBehaviour:
     itemName: green
     icon: {fileID: -2468209741511900084, guid: 919c366aa5181fd49b3e872fdf4e1742, type: 3}
     colorName: green
+    worldSprite: {fileID: -4412622659412690188, guid: 919c366aa5181fd49b3e872fdf4e1742, type: 3}
   isPaper: 0
   paperSprite: {fileID: 0}
 --- !u!61 &8766613377979372906

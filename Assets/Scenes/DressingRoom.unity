@@ -782,7 +782,7 @@ Transform:
   m_GameObject: {fileID: 103056931}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.612, z: 0}
+  m_LocalPosition: {x: 0.023, y: 0.517, z: 0}
   m_LocalScale: {x: 1, y: 0.31, z: -10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1974,11 +1974,13 @@ MonoBehaviour:
     itemName: 
     icon: {fileID: 0}
     colorName: 
+    worldSprite: {fileID: 0}
   IsCorrect: 0
   dialogBox: {fileID: 1543885248}
   profileImageUI: {fileID: 292140243}
   nameTextUI: {fileID: 1057906920}
   dialogTextUI: {fileID: 1799000258}
+  necklacePoint: {fileID: 1899232810}
 --- !u!65 &428464625
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2327,11 +2329,13 @@ MonoBehaviour:
     itemName: 
     icon: {fileID: 0}
     colorName: 
+    worldSprite: {fileID: 0}
   IsCorrect: 0
   dialogBox: {fileID: 932758770}
   profileImageUI: {fileID: 18000911}
   nameTextUI: {fileID: 1457714270}
   dialogTextUI: {fileID: 1393458207}
+  necklacePoint: {fileID: 1483623013}
 --- !u!65 &479330211
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4582,7 +4586,7 @@ Transform:
   m_GameObject: {fileID: 915400312}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.612, z: 0}
+  m_LocalPosition: {x: 0.028, y: 0.512, z: 0}
   m_LocalScale: {x: 1, y: 0.31, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4965,11 +4969,13 @@ MonoBehaviour:
     itemName: 
     icon: {fileID: 0}
     colorName: 
+    worldSprite: {fileID: 0}
   IsCorrect: 0
   dialogBox: {fileID: 195556690}
   profileImageUI: {fileID: 1501907825}
   nameTextUI: {fileID: 1938031695}
   dialogTextUI: {fileID: 1155293777}
+  necklacePoint: {fileID: 103056932}
 --- !u!1 &1004033458
 GameObject:
   m_ObjectHideFlags: 0
@@ -6428,11 +6434,13 @@ MonoBehaviour:
     itemName: 
     icon: {fileID: 0}
     colorName: 
+    worldSprite: {fileID: 0}
   IsCorrect: 0
   dialogBox: {fileID: 59312391}
   profileImageUI: {fileID: 768862019}
   nameTextUI: {fileID: 1465663927}
   dialogTextUI: {fileID: 909178789}
+  necklacePoint: {fileID: 1680517588}
 --- !u!65 &1437284239
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6882,7 +6890,7 @@ Transform:
   m_GameObject: {fileID: 1483623012}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.612, z: 0}
+  m_LocalPosition: {x: 0.02, y: 0.52, z: 0}
   m_LocalScale: {x: 1, y: 0.31, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7883,7 +7891,7 @@ Transform:
   m_GameObject: {fileID: 1680517587}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.612, z: 0}
+  m_LocalPosition: {x: 0.023, y: 0.503, z: 0}
   m_LocalScale: {x: 1, y: 0.31, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7948,11 +7956,13 @@ MonoBehaviour:
     itemName: 
     icon: {fileID: 0}
     colorName: 
+    worldSprite: {fileID: 0}
   IsCorrect: 0
   dialogBox: {fileID: 1022078209}
   profileImageUI: {fileID: 12530605}
   nameTextUI: {fileID: 1721196307}
   dialogTextUI: {fileID: 1751110128}
+  necklacePoint: {fileID: 915400313}
 --- !u!65 &1684863752
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8501,7 +8511,7 @@ PrefabInstance:
       objectReference: {fileID: 989055628}
     - target: {fileID: 3044165395498917923, guid: 77259ea82ec956143a28236fd563d3ee, type: 3}
       propertyPath: mannequinsInRange.Array.size
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3044165395498917923, guid: 77259ea82ec956143a28236fd563d3ee, type: 3}
       propertyPath: 'mannequinsInRange.Array.data[0]'
@@ -8510,7 +8520,7 @@ PrefabInstance:
     - target: {fileID: 3044165395498917923, guid: 77259ea82ec956143a28236fd563d3ee, type: 3}
       propertyPath: 'mannequinsInRange.Array.data[1]'
       value: 
-      objectReference: {fileID: 428464624}
+      objectReference: {fileID: 1437284238}
     - target: {fileID: 3044165395498917923, guid: 77259ea82ec956143a28236fd563d3ee, type: 3}
       propertyPath: 'mannequinsInRange.Array.data[2]'
       value: 
@@ -9178,7 +9188,7 @@ Transform:
   m_GameObject: {fileID: 1899232809}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.612, z: 0}
+  m_LocalPosition: {x: 0.031, y: 0.518, z: 0}
   m_LocalScale: {x: 1, y: 0.31, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

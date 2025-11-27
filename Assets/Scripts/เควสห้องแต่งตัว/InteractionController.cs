@@ -8,7 +8,7 @@ public class InteractionController : MonoBehaviour
 
     void Update()
     {
-        // --- กด C เพื่อคุย/ใส่สร้อย ---
+        // --- กด C เพื่อคุย / ใส่สร้อย ---
         if (Input.GetKeyDown(KeyCode.C))
         {
             Mannequin target = GetClosestMannequin();
@@ -31,9 +31,7 @@ public class InteractionController : MonoBehaviour
         if (dialogActive && Input.GetKeyDown(KeyCode.Return))
         {
             Mannequin target = GetClosestMannequin();
-            if (target != null)
-                target.StopDialog();
-
+            if (target != null) target.StopDialog();
             dialogActive = false;
         }
 
@@ -41,12 +39,11 @@ public class InteractionController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             Mannequin target = GetClosestMannequin();
-            if (target != null)
-                RemoveNecklaceFromMannequin(target);
+            if (target != null) RemoveNecklaceFromMannequin(target);
         }
     }
 
-    // ====== ใส่สร้อย ======
+    // ------------------- ใส่สร้อย -------------------
     void EquipNecklaceToMannequin(Mannequin target)
     {
         int index = InventoryManager.instance.GetSelectedIndex();
@@ -55,27 +52,26 @@ public class InteractionController : MonoBehaviour
         Item original = InventoryManager.instance.leftItems[index];
         if (original == null) return;
 
-        // ⭐ สำคัญที่สุด — Clone Item ก่อนส่งให้หุ่น
+        // ⭐ Clone item ก่อนส่งให้หุ่น
         Item copy = original.Clone();
 
         target.Equip(copy);
 
-        // ลบออกจาก inventory
+        // ลบของใน inventory
         InventoryManager.instance.leftItems[index] = null;
         InventoryManager.instance.UpdateButtonIcon(index);
 
-        Debug.Log($"✔ ใส่สร้อยให้ {target.characterName} : {copy.colorName}");
+        Debug.Log($"✔ ใส่สร้อยให้ {target.characterName}: {copy.colorName}");
     }
 
-    // ====== ถอดสร้อย ======
+    // ------------------- ถอดสร้อย -------------------
     void RemoveNecklaceFromMannequin(Mannequin target)
     {
         Item removed = target.RemoveNecklace();
-        if (removed != null)
-            InventoryManager.instance.PickupItem(removed);
+        if (removed != null) InventoryManager.instance.PickupItem(removed);
     }
 
-    // ====== หาเป้าหมายที่ใกล้ที่สุด ======
+    // ------------------- หาเป้าหมายใกล้ที่สุด -------------------
     private Mannequin GetClosestMannequin()
     {
         float minDist = float.MaxValue;
@@ -85,7 +81,6 @@ public class InteractionController : MonoBehaviour
         {
             if (m == null) continue;
             float dist = Vector3.Distance(transform.position, m.transform.position);
-
             if (dist < minDist)
             {
                 minDist = dist;
@@ -96,7 +91,7 @@ public class InteractionController : MonoBehaviour
         return closest;
     }
 
-    // ====== Trigger 2D ======
+    // ------------------- Trigger 2D -------------------
     private void OnTriggerEnter2D(Collider2D other)
     {
         Mannequin m = other.GetComponent<Mannequin>();
