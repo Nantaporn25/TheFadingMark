@@ -52,15 +52,19 @@ public class InteractionController : MonoBehaviour
         int index = InventoryManager.instance.GetSelectedIndex();
         if (index < 0) return;
 
-        Item item = InventoryManager.instance.leftItems[index];
-        if (item == null) return;
+        Item original = InventoryManager.instance.leftItems[index];
+        if (original == null) return;
 
-        target.Equip(item);
+        // ⭐ สำคัญที่สุด — Clone Item ก่อนส่งให้หุ่น
+        Item copy = original.Clone();
 
+        target.Equip(copy);
+
+        // ลบออกจาก inventory
         InventoryManager.instance.leftItems[index] = null;
         InventoryManager.instance.UpdateButtonIcon(index);
 
-        Debug.Log($"✔ ใส่สร้อยให้ {target.characterName} เรียบร้อย");
+        Debug.Log($"✔ ใส่สร้อยให้ {target.characterName} : {copy.colorName}");
     }
 
     // ====== ถอดสร้อย ======
