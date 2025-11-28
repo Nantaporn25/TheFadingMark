@@ -17,21 +17,29 @@ public class MainMannequin : MonoBehaviour
     public Sprite profileImage;
     public string npcName = "หัวหน้าหุ่น";
 
+    [Header("ประโยคเมื่อถูกต้องทั้งหมด (เรียงตามลำดับ)")]
+    [TextArea(2, 3)]
+    public string[] correctDialogLines;
+
+    [Header("วัตถุรางวัล (ปิดไว้ก่อนใน Inspector)")]
+    public GameObject rewardObject;
+
     private bool playerInRange = false;
-    private bool dialogActive = false;   // <-- เพิ่มตรงนี้
+    private bool dialogActive = false;
+    private int dialogIndex = 0;
 
     void Update()
     {
-        // กด E เพื่อตรวจ เมื่อผู้เล่นอยู่ในระยะ
+        // ผู้เล่นกด E เพื่อตรวจ
         if (playerInRange && Input.GetKeyDown(KeyCode.E) && !dialogActive)
         {
             CheckAllMannequins();
         }
 
-        // กด Enter เพื่อปิดไดอะล็อก
+        // กด Enter เพื่อไปประโยคถัดไป หรือปิดท้ายเพื่่อให้รางวัล
         if (dialogActive && Input.GetKeyDown(KeyCode.Return))
         {
-            HideDialog();
+            NextDialog();
         }
     }
 
@@ -47,13 +55,40 @@ public class MainMannequin : MonoBehaviour
             }
         }
 
-        ShowDialog("เยี่ยมมาก! ทุกหุ่นใส่สีถูกต้องแล้ว!");
-        GiveReward();
+        // ผ่านหมด!
+        dialogIndex = 0;
+        dialogActive = true;
+
+        if (correctDialogLines.Length > 0)
+            ShowDialog(correctDialogLines[dialogIndex]);
     }
 
+    // ---------------------- ไปประโยคถัดไป ----------------------
+    void NextDialog()
+    {
+        dialogIndex++;
+
+        // ถ้ายังไม่ถึงประโยคสุดท้าย → แสดงประโยคต่อไป
+        if (dialogIndex < correctDialogLines.Length)
+        {
+            ShowDialog(correctDialogLines[dialogIndex]);
+        }
+        // ถ้าครบแล้ว → ปิด Dialog + โชว์รางวัล
+        else
+        {
+            HideDialog();
+            GiveReward();
+        }
+    }
+
+    // ---------------------- แสดงรางวัล ----------------------
     void GiveReward()
     {
-        // ใส่รางวัล เช่น เปิดประตู
+        if (rewardObject != null)
+        {
+            rewardObject.SetActive(true);   // ← ปรากฎรางวัลหลังประโยคสุดท้าย
+            Debug.Log("🎉 รางวัลปรากฎแล้ว!");
+        }
     }
 
     // ---------------------- ระบบไดอะล็อก ----------------------
@@ -90,7 +125,7 @@ public class MainMannequin : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
-            HideDialog(); // ออกระยะก็ปิดด้วย
+            HideDialog();
         }
     }
 }

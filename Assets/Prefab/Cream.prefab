@@ -523,7 +523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 137070381000932187}
-  moveSpeed: 10
+  moveSpeed: 5
   flashlight: {fileID: 5180173360953667471}
   canMove: 1
   interactionRange: 2

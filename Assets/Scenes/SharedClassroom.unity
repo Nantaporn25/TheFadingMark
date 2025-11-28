@@ -837,7 +837,7 @@ MonoBehaviour:
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 512
-  checkSizeMultiplier: {x: 0.25, y: 0.15}
+  checkSizeMultiplier: {x: 0.25, y: 0.12}
   isAtTarget: 0
 --- !u!61 &86934007
 BoxCollider2D:
@@ -5290,7 +5290,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.24953496}
+  m_Offset: {x: 0, y: 0.28615397}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5300,7 +5300,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 0.9770825}
+  m_Size: {x: 1, y: 0.9038445}
   m_EdgeRadius: 0
 --- !u!1 &620897513
 GameObject:
@@ -5636,7 +5636,7 @@ Transform:
   m_GameObject: {fileID: 664143436}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.4375422, y: 4.61151, z: -10}
+  m_LocalPosition: {x: 3.4812846, y: 4.6180696, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9060,7 +9060,7 @@ Transform:
   m_GameObject: {fileID: 1032392155}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.23, y: -2.25, z: 0}
+  m_LocalPosition: {x: 15.85, y: -2.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9420,9 +9420,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tables:
   - {fileID: 1753398587}
+  - {fileID: 1890212626}
+  - {fileID: 86934006}
   completeDialog:
-  - "\u0E14\u0E39\u0E40\u0E2B\u0E21\u0E37\u0E48\u0E2D\u0E19\u0E08\u0E30\u0E2A\u0E33\u0E40\u0E23\u0E47\u0E08\u0E19\u0E30"
-  - "\u0E40\u0E2D\u0E4A\u0E30 \u0E2D\u0E30\u0E44\u0E23\u0E2D\u0E22\u0E38\u0E48\u0E15\u0E23\u0E07\u0E2B\u0E19\u0E49\u0E32\u0E2B\u0E49\u0E2D\u0E07\u0E19\u0E30"
+  - "\u0E14\u0E39\u0E40\u0E2B\u0E21\u0E34\u0E2D\u0E19\u0E08\u0E30\u0E2A\u0E33\u0E40\u0E23\u0E47\u0E08\u0E19\u0E30"
+  - "\u0E40\u0E2D\u0E4B?"
+  - "\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E44\u0E14\u0E49\u0E22\u0E34\u0E19\u0E2D\u0E30\u0E44\u0E23 
+    \u0E15\u0E01\u0E2D\u0E22\u0E39\u0E48\u0E2B\u0E19\u0E49\u0E32\u0E2B\u0E49\u0E2D\u0E07\u0E40\u0E25\u0E22"
   rewardObject: {fileID: 1206627945}
 --- !u!1 &1125202865
 GameObject:
@@ -10145,6 +10149,7 @@ MonoBehaviour:
     itemName: keyNecklace
     icon: {fileID: -1779430817231028731, guid: b7e96f8d0e1873940a5d212d76dd5a0b, type: 3}
     colorName: 
+    worldSprite: {fileID: 0}
   isPaper: 0
   paperSprite: {fileID: 0}
 --- !u!61 &1206627947
@@ -11431,7 +11436,7 @@ Transform:
   m_GameObject: {fileID: 1372100424}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.34, y: 5.3, z: -10}
+  m_LocalPosition: {x: 5.34, y: 5.3, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15694,7 +15699,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 422337017123963524, guid: 77259ea82ec956143a28236fd563d3ee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.34
+      value: 5.34
       objectReference: {fileID: 0}
     - target: {fileID: 422337017123963524, guid: 77259ea82ec956143a28236fd563d3ee, type: 3}
       propertyPath: m_LocalPosition.y

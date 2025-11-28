@@ -5,22 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Scenes/\u0E09\u0E32\u0E01\u0E40\u0E1B\u0E34\u0E14/MenuScene.unity"
     guid: c280cd1689d940e48ac07b36122ec070
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Scenes/\u0E09\u0E32\u0E01\u0E40\u0E1B\u0E34\u0E14/PhoneScene.unity"
     guid: 75524a5e24606ab42ba66975ef7bf094
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Scenes/\u0E09\u0E32\u0E01\u0E40\u0E1B\u0E34\u0E14/FadeOne.unity"
     guid: ac9332d8f39713145b6a7a54102c2685
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Scenes/\u0E09\u0E32\u0E01\u0E40\u0E1B\u0E34\u0E14/FadeTwo.unity"
     guid: 6c631a04d8bc2be468229d39a7a0bcf7
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Scenes/\u0E09\u0E32\u0E01\u0E40\u0E1B\u0E34\u0E14/FadeThree.unity"
     guid: c577bfbb7dc34c641ba15077f1e6a740
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/HallWay1.unity
     guid: 0b75976b917e48247a953673540247d0
   - enabled: 1
