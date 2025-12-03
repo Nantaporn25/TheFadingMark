@@ -47,6 +47,15 @@ public class InventoryManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1)) SelectButton(0);
         else if (Input.GetKeyDown(KeyCode.Alpha2)) SelectButton(1);
         else if (Input.GetKeyDown(KeyCode.Alpha3)) SelectButton(2);
+
+        // 🟦 เพิ่มส่วนนี้เพื่อให้กด Enter ปิดไดอะล็อกเมื่อช่องเต็ม
+        if (dialoguePanel != null && dialoguePanel.activeSelf)
+        {
+            if (Input.GetKeyDown(KeyCode.Return)) // Enter
+            {
+                dialoguePanel.SetActive(false);
+            }
+        }
     }
 
     void InitializeUI()
@@ -122,6 +131,30 @@ public class InventoryManager : MonoBehaviour
             dialoguePanel.SetActive(true);
         }
 
+        return false;
+    }
+    public bool HasItem(string itemName)
+    {
+        foreach (var item in leftItems)
+        {
+            if (item != null && item.itemName == itemName)
+                return true;
+        }
+        return false;
+    }
+
+    // เอาไอเท็มออกจาก inventory ตามชื่อ
+    public bool RemoveItem(string itemName)
+    {
+        for (int i = 0; i < leftItems.Length; i++)
+        {
+            if (leftItems[i] != null && leftItems[i].itemName == itemName)
+            {
+                leftItems[i] = null;
+                UpdateButtonIcon(i); // อัปเดต UI
+                return true;
+            }
+        }
         return false;
     }
 }

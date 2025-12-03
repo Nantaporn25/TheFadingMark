@@ -523,7 +523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 137070381000932187}
-  moveSpeed: 5
+  moveSpeed: 8
   flashlight: {fileID: 5180173360953667471}
   canMove: 1
   interactionRange: 2
@@ -539,7 +539,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3570813491d64b34194d3a1335bb9815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mannequinsInRange: []
+  mannequinsInRange:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &5180173360953667471
 GameObject:
   m_ObjectHideFlags: 0
