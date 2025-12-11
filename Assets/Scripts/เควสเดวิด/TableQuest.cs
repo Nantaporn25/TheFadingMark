@@ -2,13 +2,8 @@
 
 public class TableQuest : MonoBehaviour
 {
-    [Header("ตำแหน่งที่หัวจะไปโผล่บนโต๊ะ")]
-    public Transform[] slotPoints;   // 3 ตำแหน่ง
-
-    [Header("Prefab หัวเดวิส (3 อัน)")]
-    public GameObject[] headPrefabs; // 3 Prefab
-
-    [Header("ภาพรางวัล (ปิดไว้ก่อน)")]
+    public Transform[] slotPoints;
+    public GameObject[] headPrefabs;
     public GameObject rewardImage;
 
     private int headsPlaced = 0;
@@ -30,24 +25,25 @@ public class TableQuest : MonoBehaviour
 
     private void PlaceHead()
     {
-        // ถ้าวางครบแล้ว หยุด
         if (headsPlaced >= slotPoints.Length)
             return;
 
-        // วาง prefab ตามลำดับ
+        // วางหัว
         Instantiate(headPrefabs[headsPlaced],
                     slotPoints[headsPlaced].position,
                     Quaternion.identity);
 
+        // ลบหัวออกจาก inventory
+        InventoryManager.instance.RemoveItem("DavisHead" + (headsPlaced + 1));
+
         headsPlaced++;
 
-        // ถ้าครบแล้ว → แสดงรางวัล
         if (headsPlaced == slotPoints.Length)
         {
             if (rewardImage != null)
                 rewardImage.SetActive(true);
 
-            Debug.Log("เควสเสร็จแล้ว!");
+            Debug.Log("เควสเสร็จสมบูรณ์!");
         }
     }
 
