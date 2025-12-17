@@ -43,6 +43,9 @@ public class InventoryManager : MonoBehaviour
 
     void Update()
     {
+        if (leftButtons == null || leftButtons.Length == 0)
+            return;
+
         if (Input.GetKeyDown(KeyCode.Alpha1)) SelectButton(0);
         else if (Input.GetKeyDown(KeyCode.Alpha2)) SelectButton(1);
         else if (Input.GetKeyDown(KeyCode.Alpha3)) SelectButton(2);
@@ -56,6 +59,9 @@ public class InventoryManager : MonoBehaviour
 
     void InitializeUI()
     {
+        if (leftButtons == null || leftButtons.Length == 0)
+            return;
+
         // ปิดไฮไลต์ทั้งหมด
         if (leftHighlights != null)
         {

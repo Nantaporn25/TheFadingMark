@@ -1,109 +1,103 @@
 ﻿using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 using System.Collections;
 
 public class DialogueOne : MonoBehaviour
 {
     [Header("UI")]
-    public TextMeshProUGUI dialogueText;
     public GameObject dialoguePanel;
+    public TextMeshProUGUI dialogueText;
+    public Image characterImage;
     public GameObject tutorialUI;
 
-    [Header("Dialogue Settings")]
+    [Header("Dialogue Content")]
     [TextArea(3, 6)]
     public string[] sentences;
-    public bool isTutorial = true;
+    public Sprite[] sentenceImages;
 
-    [Header("Typewriter Settings")]
+    [Header("Typewriter")]
     public float typingSpeed = 0.05f;
-
-    //[Header("Typing Sound")]
-    //public AudioSource typingAudioSource;   // เสียงพิมพ์เฉพาะตัวนี้
-    //public AudioClip typingSound;           // ไฟล์เสียงพิมพ์ (blip / tick)
-    //public float typingSoundDelay = 0.07f;  // ระยะห่างระหว่างเสียงแต่ละตัว
 
     private int index = 0;
     private bool isTyping = false;
-    private bool tutorialActive = false;   // ขณะ Tutorial เปิดอยู่
-    private bool tutorialShown = false;    // เปิดแล้วครั้งเดียว
+    private bool dialogueEnded = false;
+    private bool tutorialShowing = false;
+    private bool finished = false;
     private Coroutine typingCoroutine;
 
     void Start()
     {
-        // เปิด DialoguePanel ตอนเริ่ม
-        if (dialoguePanel != null)
-            dialoguePanel.SetActive(true);
-
-        // ปิด TutorialUI ตอนเริ่ม
-        if (tutorialUI != null)
-            tutorialUI.SetActive(false);
-
-        // ถ้าไม่มีประโยคใน Inspector ให้ใส่ค่าเริ่มต้น
-        if (sentences.Length == 0)
-        {
-            sentences = new string[3];
-            sentences[0] = "สวัสดีผู้เล่น";
-            sentences[1] = "นี่คือเกมตัวอย่าง";
-            sentences[2] = "พร้อมเริ่ม Tutorial แล้ว";
-        }
-
-        // เริ่มพิมพ์ประโยคแรก
-        StartTyping(sentences[index]);
+        dialoguePanel.SetActive(true);
+        tutorialUI?.SetActive(false);
+        ShowSentence();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.X))
+        if (!Input.GetKeyDown(KeyCode.Return) || finished)
+            return;
+
+        // ⌨️ ข้ามพิมพ์
+        if (isTyping)
         {
-            if (isTyping)
+            StopCoroutine(typingCoroutine);
+            dialogueText.text = sentences[index];
+            isTyping = false;
+            return;
+        }
+
+        // 🗨️ ยังอยู่ในบทสนทนา
+        if (!dialogueEnded)
+        {
+            if (index < sentences.Length - 1)
             {
-                // ถ้ากำลังพิมพ์ → แสดงข้อความเต็มทันที
-                StopAllCoroutines();
-                dialogueText.text = sentences[index];
-                isTyping = false;
-               
-            }
-            else if (!tutorialActive)
-            {
-                NextSentence();
+                index++;
+                ShowSentence();
             }
             else
             {
-                // ปิด Tutorial UI
-                tutorialUI.SetActive(false);
-                tutorialActive = false;
+                EndDialogueAndShowTutorial();
             }
+            return;
+        }
+
+        // ❌ ปิด Tutorial (Enter ครั้งเดียว)
+        if (tutorialShowing)
+        {
+            tutorialUI.SetActive(false);
+            tutorialShowing = false;
+            finished = true; // 🔒 ล็อกไม่ให้ Enter ทำอะไรอีก
         }
     }
 
-    void NextSentence()
+    void EndDialogueAndShowTutorial()
     {
-        if (index < sentences.Length - 1)
-        {
-            index++;
-            StartTyping(sentences[index]);
-        }
-        else
-        {
-            // จบไดอาล็อก
-            dialoguePanel.SetActive(false);
+        dialoguePanel.SetActive(false);
+        dialogueEnded = true;
 
-            // เปิด Tutorial UI แค่ครั้งเดียว
-            if (isTutorial && tutorialUI != null && !tutorialShown)
-            {
-                tutorialUI.SetActive(true);
-                tutorialActive = true;
-                tutorialShown = true; // ป้องกันเปิดซ้ำ
-            }
+        // 📘 เปิด Tutorial อัตโนมัติ
+        if (tutorialUI != null)
+        {
+            tutorialUI.SetActive(true);
+            tutorialShowing = true;
         }
     }
 
-    void StartTyping(string sentence)
+    void ShowSentence()
     {
+        if (characterImage != null &&
+            sentenceImages != null &&
+            index < sentenceImages.Length)
+        {
+            characterImage.sprite = sentenceImages[index];
+            characterImage.enabled = true;
+        }
+
         if (typingCoroutine != null)
             StopCoroutine(typingCoroutine);
 
-        typingCoroutine = StartCoroutine(TypeSentence(sentence));
+        typingCoroutine = StartCoroutine(TypeSentence(sentences[index]));
     }
 
     IEnumerator TypeSentence(string sentence)
@@ -111,13 +105,9 @@ public class DialogueOne : MonoBehaviour
         isTyping = true;
         dialogueText.text = "";
 
-        
-        foreach (char letter in sentence.ToCharArray())
+        foreach (char c in sentence)
         {
-            dialogueText.text += letter;
-
-            
-
+            dialogueText.text += c;
             yield return new WaitForSeconds(typingSpeed);
         }
 

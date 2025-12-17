@@ -526,7 +526,7 @@ MonoBehaviour:
   moveSpeed: 8
   flashlight: {fileID: 5180173360953667471}
   canMove: 1
-  interactionRange: 2
+  interactionRange: 1.5
 --- !u!114 &3044165395498917923
 MonoBehaviour:
   m_ObjectHideFlags: 0
