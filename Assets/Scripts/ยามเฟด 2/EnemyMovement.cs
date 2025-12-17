@@ -102,4 +102,12 @@ public class EnemyMovement : MonoBehaviour
 
     public void StartChase() => isChasing = true;
     public void StopChase() => isChasing = false;
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            GameOverFadeTwo.Instance.GameOver();
+        }
+    }
 }

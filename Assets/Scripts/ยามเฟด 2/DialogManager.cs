@@ -1,17 +1,25 @@
 ﻿using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.Collections;
 using System.Collections.Generic;
 
 public class DialogManager : MonoBehaviour
 {
     public static DialogManager Instance;
+
     public GameObject dialogPanel;
     public Image characterImageUI;
     public TextMeshProUGUI characterNameUI;
     public TextMeshProUGUI dialogTextUI;
 
+    [Header("Typewriter")]
+    public float typingSpeed = 0.04f;
+
     private Queue<DialogueLine> dialogueLines;
+    private Coroutine typingCoroutine;
+    private bool isTyping = false;
+    private string currentSentence;
 
     private void Awake()
     {
@@ -24,10 +32,21 @@ public class DialogManager : MonoBehaviour
 
     private void Update()
     {
-        // กด Enter เพื่อไปประโยคถัดไป
-        if (dialogPanel.activeSelf && Input.GetKeyDown(KeyCode.Return))
+        if (!dialogPanel.activeSelf) return;
+
+        if (Input.GetKeyDown(KeyCode.Return))
         {
-            DisplayNextLine();
+            if (isTyping)
+            {
+                // ถ้ากำลังพิมพ์ → แสดงข้อความเต็มทันที
+                StopCoroutine(typingCoroutine);
+                dialogTextUI.text = currentSentence;
+                isTyping = false;
+            }
+            else
+            {
+                DisplayNextLine();
+            }
         }
     }
 
@@ -53,15 +72,35 @@ public class DialogManager : MonoBehaviour
         }
 
         DialogueLine line = dialogueLines.Dequeue();
+
         characterNameUI.text = line.characterName;
-        dialogTextUI.text = line.sentence;
         characterImageUI.sprite = line.characterImage;
+
+        currentSentence = line.sentence;
+
+        if (typingCoroutine != null)
+            StopCoroutine(typingCoroutine);
+
+        typingCoroutine = StartCoroutine(TypeSentence(currentSentence));
+    }
+
+    IEnumerator TypeSentence(string sentence)
+    {
+        isTyping = true;
+        dialogTextUI.text = "";
+
+        foreach (char c in sentence)
+        {
+            dialogTextUI.text += c;
+            yield return new WaitForSecondsRealtime(typingSpeed);
+        }
+
+        isTyping = false;
     }
 
     private void EndDialog()
     {
         dialogPanel.SetActive(false);
-
         Time.timeScale = 1f;
     }
 }
