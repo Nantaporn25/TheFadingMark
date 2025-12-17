@@ -9,13 +9,13 @@ public class InventoryManager : MonoBehaviour
 
     [Header("UI References")]
     public Button[] leftButtons;
-    public Image[] leftHighlights; // ไฮไลต์ช่อง
-    public Image[] leftIcons;
+    public Image[] leftHighlights;
+    public Image[] leftIcons; // 👈 เป็น Icon ที่อยู่บนปุ่ม
     public GameObject dialoguePanel;
     public TextMeshProUGUI dialogueText;
 
     [Header("Inventory Data")]
-    public Item[] leftItems; // 3 ช่องเก็บของ
+    public Item[] leftItems;
 
     private int selectedIndex = -1;
     public int SelectedIndex => selectedIndex;
@@ -43,24 +43,20 @@ public class InventoryManager : MonoBehaviour
 
     void Update()
     {
-        // กดปุ่ม 1-3 เพื่อเลือกช่อง
         if (Input.GetKeyDown(KeyCode.Alpha1)) SelectButton(0);
         else if (Input.GetKeyDown(KeyCode.Alpha2)) SelectButton(1);
         else if (Input.GetKeyDown(KeyCode.Alpha3)) SelectButton(2);
 
-        // 🟦 เพิ่มส่วนนี้เพื่อให้กด Enter ปิดไดอะล็อกเมื่อช่องเต็ม
         if (dialoguePanel != null && dialoguePanel.activeSelf)
         {
-            if (Input.GetKeyDown(KeyCode.Return)) // Enter
-            {
+            if (Input.GetKeyDown(KeyCode.Return))
                 dialoguePanel.SetActive(false);
-            }
         }
     }
 
     void InitializeUI()
     {
-        // ปิดไฮไลต์ทั้งหมดตอนเริ่ม
+        // ปิดไฮไลต์ทั้งหมด
         if (leftHighlights != null)
         {
             foreach (var h in leftHighlights)
@@ -74,7 +70,7 @@ public class InventoryManager : MonoBehaviour
                 int index = i;
                 leftButtons[i].onClick.RemoveAllListeners();
                 leftButtons[i].onClick.AddListener(() => SelectButton(index));
-                UpdateButtonIcon(i);
+                UpdateButtonIcon(i); // 👈 อัปเดตตอนเริ่ม
             }
         }
 
@@ -89,25 +85,25 @@ public class InventoryManager : MonoBehaviour
         if (leftHighlights != null)
         {
             for (int i = 0; i < leftHighlights.Length; i++)
-            {
                 if (leftHighlights[i] != null)
                     leftHighlights[i].enabled = (i == selectedIndex);
-            }
         }
     }
-    public int GetSelectedIndex()
-    {
-        return selectedIndex;
-    }
+
     public void UpdateButtonIcon(int index)
     {
-
         if (leftIcons == null || leftIcons.Length <= index) return;
-        if (leftItems != null && leftItems.Length > index && leftItems[index] != null)
-            leftIcons[index].sprite = leftItems[index].icon;
-        else
-            leftIcons[index].sprite = null;
 
+        if (leftItems[index] != null)
+        {
+            leftIcons[index].sprite = leftItems[index].icon;
+            leftIcons[index].enabled = true;   // ✅ มีของ → โชว์ไอคอน
+        }
+        else
+        {
+            leftIcons[index].sprite = null;
+            leftIcons[index].enabled = false;  // ✅ ว่าง → ซ่อนไอคอน (เห็นช่องสีฟ้าแทน)
+        }
     }
 
     public bool PickupItem(Item newItem)
@@ -116,7 +112,7 @@ public class InventoryManager : MonoBehaviour
 
         for (int i = 0; i < leftItems.Length; i++)
         {
-            if (leftItems[i] == null || string.IsNullOrEmpty(leftItems[i].itemName))
+            if (leftItems[i] == null)
             {
                 leftItems[i] = newItem;
                 UpdateButtonIcon(i);
@@ -133,17 +129,7 @@ public class InventoryManager : MonoBehaviour
 
         return false;
     }
-    public bool HasItem(string itemName)
-    {
-        foreach (var item in leftItems)
-        {
-            if (item != null && item.itemName == itemName)
-                return true;
-        }
-        return false;
-    }
 
-    // เอาไอเท็มออกจาก inventory ตามชื่อ
     public bool RemoveItem(string itemName)
     {
         for (int i = 0; i < leftItems.Length; i++)
@@ -151,10 +137,14 @@ public class InventoryManager : MonoBehaviour
             if (leftItems[i] != null && leftItems[i].itemName == itemName)
             {
                 leftItems[i] = null;
-                UpdateButtonIcon(i); // อัปเดต UI
+                UpdateButtonIcon(i);
                 return true;
             }
         }
         return false;
+    }
+    public int GetSelectedIndex()
+    {
+        return selectedIndex;
     }
 }

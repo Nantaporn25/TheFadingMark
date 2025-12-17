@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78fe6227c20e91540b46f81926faded0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: 
-  icon: {fileID: 0}
+  itemName: sign
+  icon: {fileID: 9130784884593591570, guid: 1f5583324dd58d14a802ce04949085d2, type: 3}
   alertIcon: {fileID: 0}
   isPlayerNearby: 0

@@ -11666,34 +11666,6 @@ PrefabInstance:
       propertyPath: alertIcon
       value: 
       objectReference: {fileID: 1067853340920493944}
-    - target: {fileID: 3390548854424275735, guid: 28821ea805d8cd046860f6069a927b28, type: 3}
-      propertyPath: paperSprite
-      value: 
-      objectReference: {fileID: 924380842918575714, guid: aa6a502f88def574ba303f70e665a994, type: 3}
-    - target: {fileID: 3390548854424275735, guid: 28821ea805d8cd046860f6069a927b28, type: 3}
-      propertyPath: paperSprites.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390548854424275735, guid: 28821ea805d8cd046860f6069a927b28, type: 3}
-      propertyPath: 'paperSprites.Array.data[0]'
-      value: 
-      objectReference: {fileID: 5478568134312263399, guid: bf2db901a5d72f64eb381d33c57ae5fa, type: 3}
-    - target: {fileID: 3390548854424275735, guid: 28821ea805d8cd046860f6069a927b28, type: 3}
-      propertyPath: 'paperSprites.Array.data[1]'
-      value: 
-      objectReference: {fileID: 2442496851244246278, guid: c92aebdf84d6f4447ab37ee6f2c2713e, type: 3}
-    - target: {fileID: 3390548854424275735, guid: 28821ea805d8cd046860f6069a927b28, type: 3}
-      propertyPath: 'paperSprites.Array.data[2]'
-      value: 
-      objectReference: {fileID: -9136781501942778630, guid: 211b0b32ada252e43b966908cde0e7e3, type: 3}
-    - target: {fileID: 3390548854424275735, guid: 28821ea805d8cd046860f6069a927b28, type: 3}
-      propertyPath: 'paperSprites.Array.data[3]'
-      value: 
-      objectReference: {fileID: -2309230201115777967, guid: 88a33f14a999de7499c3ba6ff6095f6f, type: 3}
-    - target: {fileID: 3390548854424275735, guid: 28821ea805d8cd046860f6069a927b28, type: 3}
-      propertyPath: 'paperSprites.Array.data[4]'
-      value: 
-      objectReference: {fileID: -1944392581606674137, guid: d9c7901a91935954eabc946842abe174, type: 3}
     - target: {fileID: 4959356234072831056, guid: 28821ea805d8cd046860f6069a927b28, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.87
