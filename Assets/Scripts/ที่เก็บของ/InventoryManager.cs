@@ -20,6 +20,7 @@ public class InventoryManager : MonoBehaviour
     private int selectedIndex = -1;
     public int SelectedIndex => selectedIndex;
 
+
     void Awake()
     {
         if (instance == null)
@@ -86,14 +87,13 @@ public class InventoryManager : MonoBehaviour
 
     void SelectButton(int index)
     {
-        selectedIndex = index;
+        if (index < 0 || index >= leftItems.Length) return;
+        if (leftItems[index] == null) return;
 
-        if (leftHighlights != null)
-        {
-            for (int i = 0; i < leftHighlights.Length; i++)
-                if (leftHighlights[i] != null)
-                    leftHighlights[i].enabled = (i == selectedIndex);
-        }
+        selectedIndex = index;
+        ClearHighlights();
+        if (leftHighlights[index] != null)
+            leftHighlights[index].enabled = true;
     }
 
     public void UpdateButtonIcon(int index)
@@ -118,7 +118,13 @@ public class InventoryManager : MonoBehaviour
 
         for (int i = 0; i < leftItems.Length; i++)
         {
-            if (leftItems[i] == null)
+            //Debug.Log(string.IsNullOrEmpty(leftItems[i].itemName));
+
+            Debug.Log("newItem = " + newItem);
+            Debug.Log("newItem.icon = " + (newItem != null ? newItem.icon : null));
+            Debug.Log("leftIcons[i] = " + leftIcons[i]);
+
+            if (string.IsNullOrEmpty(leftItems[i].itemName))
             {
                 leftItems[i] = newItem;
                 UpdateButtonIcon(i);
@@ -152,5 +158,13 @@ public class InventoryManager : MonoBehaviour
     public int GetSelectedIndex()
     {
         return selectedIndex;
+    }
+    void ClearHighlights()
+    {
+        for (int i = 0; i < leftHighlights.Length; i++)
+        {
+            if (leftHighlights[i] != null)
+                leftHighlights[i].enabled = false;
+        }
     }
 }
