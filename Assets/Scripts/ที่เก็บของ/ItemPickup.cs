@@ -32,7 +32,13 @@ public class ItemPickup : MonoBehaviour
                 if (InventoryManager.instance != null)
                 {
                     bool picked = InventoryManager.instance.PickupItem(itemData);
-                    if (picked) Destroy(gameObject);
+                    if (picked)
+                    {
+                        if (PickupPopupUI.instance != null)
+                            PickupPopupUI.instance.Show(itemData);
+
+                        Destroy(gameObject);
+                    }
                 }
             }
         }

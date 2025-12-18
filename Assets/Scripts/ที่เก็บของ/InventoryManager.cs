@@ -44,8 +44,8 @@ public class InventoryManager : MonoBehaviour
 
     void Update()
     {
-        if (leftButtons == null || leftButtons.Length == 0)
-            return;
+        if (PickupPopupUI.instance != null && PickupPopupUI.instance.IsOpen())
+            return; // 👈 ถ้า popup เปิดอยู่ ไม่ให้ Inventory รับ input
 
         if (Input.GetKeyDown(KeyCode.Alpha1)) SelectButton(0);
         else if (Input.GetKeyDown(KeyCode.Alpha2)) SelectButton(1);
