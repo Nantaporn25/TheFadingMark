@@ -94,6 +94,8 @@ public class MainMannequin : MonoBehaviour
     // ---------------------- ระบบไดอะล็อก ----------------------
     void ShowDialog(string msg)
     {
+        //if (dialogBox == null) return;
+
         dialogBox.SetActive(true);
         dialogActive = true;
 
@@ -109,6 +111,8 @@ public class MainMannequin : MonoBehaviour
 
     void HideDialog()
     {
+        //if (dialogBox == null) return;
+
         dialogBox.SetActive(false);
         dialogActive = false;
     }
