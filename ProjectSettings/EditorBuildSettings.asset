@@ -35,6 +35,18 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/\u0E42\u0E16\u0E07/HallWay3_HaveEnemy.unity"
     guid: a322a4ecf3bd21f49a38f48dc1938e7f
+  - enabled: 1
+    path: "Assets/Scenes/\u0E42\u0E16\u0E07/HallWayEnd_HaveEnemy.unity"
+    guid: 494e28743f940204886f2b7ebd02bf15
+  - enabled: 1
+    path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E19\u0E32\u0E0F\u0E28\u0E34\u0E25\u0E1B\u0E4C/DanceRoom5.unity"
+    guid: efc430dbc493c704b8e3fedde3c47899
+  - enabled: 1
+    path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E1E\u0E22\u0E32\u0E1A\u0E32\u0E25/Nurse's.unity"
+    guid: 55ea45a04d787a94ba66dc9840dec498
+  - enabled: 1
+    path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E1B\u0E23\u0E30\u0E0A\u0E38\u0E21/MeetingRoom.unity"
+    guid: 03d7558be48844644b219ab053101dff
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

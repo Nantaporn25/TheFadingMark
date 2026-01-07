@@ -14,7 +14,7 @@ public class GameOverFadeTwo : MonoBehaviour
     public AudioSource sceneBGM;
 
     [Header("Scene")]
-    public string menuSceneName = "MenuScene";
+    public string menuSceneName = " ";
 
     [Header("Fade Settings")]
     public float fadeDuration = 1.5f;
