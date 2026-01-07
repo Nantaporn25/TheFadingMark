@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using TMPro;
 
 public class TableQuestManager : MonoBehaviour
 {
@@ -15,6 +16,22 @@ public class TableQuestManager : MonoBehaviour
 
     [Header("Reward Object (วางไว้ในแมพแล้วปิดไว้ก่อน)")]
     public GameObject rewardObject;
+
+    [Header("UI เควสมุมขวาบน")]
+    public GameObject questPanel;
+    public TextMeshProUGUI questObjectiveText;
+    [TextArea(2, 4)]
+    public string questObjectiveMessage = "เควส:\n- ดันโต๊ะทั้งหมดให้เข้าตำแหน่ง";
+
+    void Start()
+    {
+        // แสดงข้อความเควสตอนเริ่ม
+        if (questObjectiveText != null)
+        {
+            questObjectiveText.text = questObjectiveMessage;
+            questObjectiveText.gameObject.SetActive(true);
+        }
+    }
 
     void Update()
     {
@@ -41,6 +58,12 @@ public class TableQuestManager : MonoBehaviour
     private void TriggerQuestComplete()
     {
         Debug.Log("Quest Completed!");
+
+        // ✨ ซ่อนข้อความเควสมุมขวาบน
+        if (questObjectiveText != null)
+        {
+            questObjectiveText.gameObject.SetActive(false);
+        }
 
         // ✨ ให้รางวัลปรากฎในแมพ
         ShowReward();
