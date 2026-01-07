@@ -47,6 +47,9 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E1B\u0E23\u0E30\u0E0A\u0E38\u0E21/MeetingRoom.unity"
     guid: 03d7558be48844644b219ab053101dff
+  - enabled: 1
+    path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E40\u0E01\u0E47\u0E1A\u0E02\u0E2D\u0E07/StorageRoom.unity"
+    guid: 90c713e3609ab9248a7b65588fcba238
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -12,6 +12,8 @@ public class PickupPopupUI : MonoBehaviour
 
     private bool isOpen = false;
 
+    public SimpleDialogueUI dialogueUI;
+
     void Awake()
     {
         instance = this;
@@ -44,6 +46,12 @@ public class PickupPopupUI : MonoBehaviour
         panel.SetActive(false);
         isOpen = false;
         Time.timeScale = 1f;
+
+        // 👉 เปิดบทพูดหลังเก็บของ
+        if (dialogueUI != null)
+        {
+            dialogueUI.StartDialogue();
+        }
     }
 
     public bool IsOpen() => isOpen;
