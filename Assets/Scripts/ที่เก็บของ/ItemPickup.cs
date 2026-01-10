@@ -6,6 +6,9 @@ public class ItemPickup : MonoBehaviour
     public bool isPaper = false;        // กรณีเป็นกระดาษ
     public Sprite[] paperSprites;
 
+    public bool isPoster = false;      // 🪧 เป็นโปสเตอร์
+    public Sprite posterSprite;        // รูปโปสเตอร์
+
     private void OnTriggerStay2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
@@ -23,6 +26,15 @@ public class ItemPickup : MonoBehaviour
                         PaperManager.instance.PickupPaper(page);
                     }
 
+                    Destroy(gameObject);
+                }
+            }
+            // 🪧 โปสเตอร์ (Z)
+            else if (isPoster)
+            {
+                if (PosterManager.instance != null)
+                {
+                    PosterManager.instance.PickupPoster(posterSprite);
                     Destroy(gameObject);
                 }
             }
