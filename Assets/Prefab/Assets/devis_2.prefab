@@ -149,12 +149,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData:
-    itemName: devis_2
+    itemName: devis
     icon: {fileID: -8423844578141932302, guid: 1f1ee48aba1ea954f8af691f85e479b5, type: 3}
     colorName: 
     worldSprite: {fileID: 3399647397658435729, guid: d88009013c9c245468e1705e219ffb31, type: 3}
   isPaper: 0
   paperSprites: []
+  isPoster: 0
+  posterSprite: {fileID: 0}
 --- !u!114 &7170571968694719334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78fe6227c20e91540b46f81926faded0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: devis_2
-  icon: {fileID: 0}
+  itemName: devis
+  icon: {fileID: 9130784884593591570, guid: 1f5583324dd58d14a802ce04949085d2, type: 3}
   alertIcon: {fileID: 0}
   isPlayerNearby: 0
