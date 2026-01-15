@@ -7,53 +7,29 @@ public class TriggerDialogue2D_TwoPerson : MonoBehaviour
 {
     [Header("UI")]
     public GameObject dialoguePanel;
+    public Image characterImage;
+    public TextMeshProUGUI speakerNameText;
     public TextMeshProUGUI dialogueText;
-    public Image dialogueImage;
 
-    [Header("Character A Expressions")]
-    public Sprite[] characterA_Expressions;
-
-    [Header("Character B Expressions")]
-    public Sprite[] characterB_Expressions;
-
-    [Header("Dialogue")]
-    [TextArea(2, 5)]
-    public string[] lines;
-
-    public Speaker[] speakers;
-    public Expression[] expressions;
+    [Header("Dialogue Data")]
+    public DialogueLine[] dialogueLines;
 
     [Header("Typewriter")]
     public float typingSpeed = 0.04f;
 
-    private int index;
-    private bool isTalking;
-    private bool isTyping;
-    private bool alreadyTriggered;
+    private int index = 0;
+    private bool isTalking = false;
+    private bool isTyping = false;
 
     private Coroutine typingCoroutine;
     private PlayerController2D player;
 
-    public enum Speaker
-    {
-        A,
-        B
-    }
-
-    public enum Expression
-    {
-        Normal,
-        Happy,
-        Angry,
-        Sad,
-        Shock
-    }
-
     void Start()
     {
         dialoguePanel.SetActive(false);
+
         player = GameObject.FindGameObjectWithTag("Player")
-                .GetComponent<PlayerController2D>();
+            .GetComponent<PlayerController2D>();
     }
 
     void Update()
@@ -65,7 +41,7 @@ public class TriggerDialogue2D_TwoPerson : MonoBehaviour
             if (isTyping)
             {
                 StopCoroutine(typingCoroutine);
-                dialogueText.text = lines[index];
+                dialogueText.text = dialogueLines[index].sentence;
                 isTyping = false;
             }
             else
@@ -78,35 +54,40 @@ public class TriggerDialogue2D_TwoPerson : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
-        if (alreadyTriggered) return;
 
         StartDialogue();
     }
 
     void StartDialogue()
     {
-        alreadyTriggered = true;
         isTalking = true;
         index = 0;
 
         dialoguePanel.SetActive(true);
         player.canMove = false;
 
-        UpdateSpeakerAndExpression();
-        StartTyping();
+        ShowLine();
     }
 
-    void StartTyping()
+    void ShowLine()
     {
-        typingCoroutine = StartCoroutine(TypeLine(lines[index]));
+        DialogueLine line = dialogueLines[index];
+
+        characterImage.sprite = line.characterImage;
+        speakerNameText.text = line.characterName;
+
+        if (typingCoroutine != null)
+            StopCoroutine(typingCoroutine);
+
+        typingCoroutine = StartCoroutine(TypeLine(line.sentence));
     }
 
-    IEnumerator TypeLine(string line)
+    IEnumerator TypeLine(string sentence)
     {
         isTyping = true;
         dialogueText.text = "";
 
-        foreach (char c in line)
+        foreach (char c in sentence)
         {
             dialogueText.text += c;
             yield return new WaitForSeconds(typingSpeed);
@@ -119,30 +100,13 @@ public class TriggerDialogue2D_TwoPerson : MonoBehaviour
     {
         index++;
 
-        if (index < lines.Length)
+        if (index < dialogueLines.Length)
         {
-            UpdateSpeakerAndExpression();
-            StartTyping();
+            ShowLine();
         }
         else
         {
             EndDialogue();
-        }
-    }
-
-    void UpdateSpeakerAndExpression()
-    {
-        int expressionIndex = (int)expressions[index];
-
-        if (speakers[index] == Speaker.A)
-        {
-            dialogueImage.sprite = characterA_Expressions[expressionIndex];
-            dialogueText.alignment = TextAlignmentOptions.Left;
-        }
-        else
-        {
-            dialogueImage.sprite = characterB_Expressions[expressionIndex];
-            dialogueText.alignment = TextAlignmentOptions.Right;
         }
     }
 

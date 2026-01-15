@@ -10,8 +10,8 @@ public class GameOverFadeTwo : MonoBehaviour
     public GameObject gameOverUI;
     public CanvasGroup fadeCanvas;
 
-    [Header("Audio")]
-    public AudioSource sceneBGM;
+    //[Header("Audio")]
+    //public AudioSource sceneBGM;
 
     [Header("Scene")]
     public string menuSceneName = " ";
@@ -46,8 +46,8 @@ public class GameOverFadeTwo : MonoBehaviour
         isGameOver = true;
         gameOverUI.SetActive(true);
 
-        if (sceneBGM != null)
-            sceneBGM.Stop();
+        //if (sceneBGM != null)
+        //    sceneBGM.Stop();
 
         Time.timeScale = 0f;
     }
