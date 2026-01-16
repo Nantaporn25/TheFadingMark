@@ -45,6 +45,6 @@ public class SceneFader : MonoBehaviour
             yield return null;
         }
 
-        SceneManager.LoadScene("FadeOne");
+        SceneManager.LoadScene(sceneName);
     }
 }

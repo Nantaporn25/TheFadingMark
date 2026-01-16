@@ -59,6 +59,12 @@ EditorBuildSettings:
       \u0E04\u0E38\u0E22\u0E01\u0E31\u0E1A\u0E23\u0E34\u0E19\u0E41\u0E25\u0E49\u0E27
       \u0E41\u0E15\u0E48\u0E23\u0E35\u0E40\u0E01\u0E21\u0E43\u0E2B\u0E21\u0E48\u0E2B\u0E25\u0E31\u0E07\u0E42\u0E14\u0E19\u0E08\u0E31\u0E1A.unity"
     guid: 1fefef6ea39972f4c92f5913aa6de45a
+  - enabled: 1
+    path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E40\u0E01\u0E47\u0E1A\u0E02\u0E2D\u0E07/StorageRoom.unity"
+    guid: 90c713e3609ab9248a7b65588fcba238
+  - enabled: 1
+    path: "Assets/Scenes/\u0E42\u0E16\u0E07/HallWayEnd_HaveEnemy 1.unity"
+    guid: 261dd8a371d7de641b74e3c528d9c446
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
