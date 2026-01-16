@@ -68,6 +68,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndScene.unity
     guid: 6cd8e4df1d8280c4bbe669e7f14cebcf
+  - enabled: 1
+    path: "Assets/Scenes/\u0E42\u0E16\u0E07/HallWay2.unity"
+    guid: ecda418b8422bac4a84355ea719b668d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

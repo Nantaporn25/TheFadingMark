@@ -2347,6 +2347,7 @@ MonoBehaviour:
   panel: {fileID: 1589975156}
   itemImage: {fileID: 1585953830}
   itemNameText: {fileID: 271256401}
+  dialogueUI: {fileID: 0}
 --- !u!1 &453776049
 GameObject:
   m_ObjectHideFlags: 0
@@ -5523,8 +5524,12 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1645892949}
   dialogueText: {fileID: 464669578}
   dialogueImage: {fileID: 853646135}
-  lines: []
-  images: []
+  lines:
+  - fhrbdb
+  - dbdfb
+  images:
+  - {fileID: 6773384493843960612, guid: cfc705e13a2b91145ac16179cad061f3, type: 3}
+  - {fileID: 6773384493843960612, guid: cfc705e13a2b91145ac16179cad061f3, type: 3}
   typingSpeed: 0.05
 --- !u!61 &988246262
 BoxCollider2D:
