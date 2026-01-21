@@ -38,6 +38,15 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E1E\u0E22\u0E32\u0E1A\u0E32\u0E25/Nurse's.unity"
     guid: 55ea45a04d787a94ba66dc9840dec498
+  - enabled: 1
+    path: "Assets/Scenes/\u0E42\u0E16\u0E07/HallWay4.unity"
+    guid: 05e336d40eddc7546a6a2dcfdef45f9c
+  - enabled: 1
+    path: "Assets/Scenes/\u0E42\u0E16\u0E07/HallWay5.unity"
+    guid: 9c15055bd0a0aaa45bb22ce6796b01dc
+  - enabled: 1
+    path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E40\u0E25\u0E04\u0E40\u0E0A\u0E2D\u0E23\u0E37/LectureRoom.unity"
+    guid: dc79ebd279cdbc3479b8371b85c3f577
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

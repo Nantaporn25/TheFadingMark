@@ -5743,7 +5743,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0
+  m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -14455,6 +14455,14 @@ PrefabInstance:
       propertyPath: feedbackText
       value: 
       objectReference: {fileID: 1000380607}
+    - target: {fileID: 6306540249912663082, guid: e234765e326dc924eb63b8f3b8c3ccad, type: 3}
+      propertyPath: m_Size.y
+      value: 3.8738158
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306540249912663082, guid: e234765e326dc924eb63b8f3b8c3ccad, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.07809222
+      objectReference: {fileID: 0}
     - target: {fileID: 8658924631729777225, guid: e234765e326dc924eb63b8f3b8c3ccad, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8

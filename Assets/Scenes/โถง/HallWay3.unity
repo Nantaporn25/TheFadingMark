@@ -4411,8 +4411,8 @@ MonoBehaviour:
   speakerNameText: {fileID: 1019609558}
   dialogueText: {fileID: 464669578}
   dialogueLines:
-  - characterName: "\u0E23\u0E34\u0E19\u0E25\u0E14\u0E32"
-    characterImage: {fileID: 310952516730200226, guid: 347cab8d6189e3847b26ba52a3e1472a, type: 3}
+  - characterName: ???
+    characterImage: {fileID: 955943864797572632, guid: d2aadcd3bbd67084a9b46a523daa1adc, type: 3}
     sentence: "\u0E04\u0E23\u0E35\u0E21"
   - characterName: "\u0E04\u0E23\u0E35\u0E21"
     characterImage: {fileID: -5256073583035839701, guid: 489cfc324218f994cbd6284a90c218b1, type: 3}
@@ -6901,8 +6901,8 @@ MonoBehaviour:
   speakerNameText: {fileID: 1019609558}
   dialogueText: {fileID: 464669578}
   dialogueLines:
-  - characterName: "\u0E23\u0E34\u0E19\u0E25\u0E14\u0E32"
-    characterImage: {fileID: 310952516730200226, guid: 347cab8d6189e3847b26ba52a3e1472a, type: 3}
+  - characterName: ???
+    characterImage: {fileID: 955943864797572632, guid: d2aadcd3bbd67084a9b46a523daa1adc, type: 3}
     sentence: "\u0E04\u0E23\u0E35\u0E21 .."
   - characterName: "\u0E04\u0E23\u0E35\u0E21"
     characterImage: {fileID: 9117568155933292517, guid: 147b8337ac3f03b4d84cc5a2df0e632a, type: 3}
