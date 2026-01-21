@@ -11,15 +11,18 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/\u0E09\u0E32\u0E01\u0E40\u0E1B\u0E34\u0E14/PhoneScene.unity"
     guid: 75524a5e24606ab42ba66975ef7bf094
-  - enabled: 0
+  - enabled: 1
     path: "Assets/Scenes/\u0E09\u0E32\u0E01\u0E40\u0E1B\u0E34\u0E14/FadeOne.unity"
     guid: ac9332d8f39713145b6a7a54102c2685
-  - enabled: 0
+  - enabled: 1
     path: "Assets/Scenes/\u0E09\u0E32\u0E01\u0E40\u0E1B\u0E34\u0E14/FadeTwo.unity"
     guid: 6c631a04d8bc2be468229d39a7a0bcf7
-  - enabled: 0
+  - enabled: 1
     path: "Assets/Scenes/\u0E09\u0E32\u0E01\u0E40\u0E1B\u0E34\u0E14/FadeThree.unity"
     guid: c577bfbb7dc34c641ba15077f1e6a740
+  - enabled: 1
+    path: "Assets/Scenes/\u0E42\u0E16\u0E07/HallWay2.unity"
+    guid: ecda418b8422bac4a84355ea719b668d
   - enabled: 1
     path: "Assets/Scenes/\u0E42\u0E16\u0E07/HallWay1.unity"
     guid: 0b75976b917e48247a953673540247d0
@@ -27,50 +30,14 @@ EditorBuildSettings:
     path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19/PracticeRoom.unity"
     guid: 454d7adac4dae654590a2e213e306024
   - enabled: 1
-    path: "Assets/Scenes/\u0E42\u0E16\u0E07/HallWay2\u0E43\u0E0A\u0E49\u0E40\u0E09\u0E1E\u0E32\u0E30\u0E01\u0E34\u0E08.unity"
-    guid: 8fc4a95af205f864786fc6b7a3ec1bdd
+    path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E19\u0E32\u0E0F\u0E28\u0E34\u0E25\u0E1B\u0E4C/DanceRoom.unity"
+    guid: 67bb3949885a56746b802f0d6874873c
   - enabled: 1
-    path: "Assets/Scenes/\u0E42\u0E16\u0E07/HallWay\u0E0A\u0E31\u0E49\u0E192\u0E43\u0E0A\u0E49\u0E40\u0E09\u0E1E\u0E32\u0E30\u0E01\u0E34\u0E08
-      1.unity"
-    guid: 3e19ca8cee3585d42b2e18a3b1ae3729
+    path: "Assets/Scenes/\u0E42\u0E16\u0E07/HallWay3.unity"
+    guid: 673fde3c1e5192a4c88db2de1418d4c7
   - enabled: 1
-    path: Assets/Scenes/SharedClassroom.unity
-    guid: 5afe2f64be090154d8c5f7e5bacd9780
-  - enabled: 1
-    path: "Assets/Scenes/\u0E42\u0E16\u0E07/HallWay\u0E0A\u0E31\u0E49\u0E192\u0E43\u0E0A\u0E49\u0E40\u0E09\u0E1E\u0E32\u0E30\u0E01\u0E34\u0E08
-      2.unity"
-    guid: b76433cf58507614eb1c2701b842b14f
-  - enabled: 1
-    path: "Assets/Scenes/\u0E42\u0E16\u0E07/HallWay2\u0E43\u0E0A\u0E49\u0E40\u0E09\u0E1E\u0E32\u0E30\u0E01\u0E34\u0E08
-      \u0E44\u0E14\u0E49\u0E01\u0E38\u0E0D\u0E41\u0E08.unity"
-    guid: 72edec72ce263d144b24a4a466fe6606
-  - enabled: 1
-    path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E19\u0E32\u0E0F\u0E28\u0E34\u0E25\u0E1B\u0E4C/DanceRoom5.unity"
-    guid: efc430dbc493c704b8e3fedde3c47899
-  - enabled: 1
-    path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E19\u0E32\u0E0F\u0E28\u0E34\u0E25\u0E1B\u0E4C/DanceRoom6
-      \u0E04\u0E38\u0E22\u0E01\u0E31\u0E1A\u0E23\u0E34\u0E19.unity"
-    guid: 68dc5a3a8c6a30a4d8f1e251e955443d
-  - enabled: 1
-    path: "Assets/Scenes/\u0E42\u0E16\u0E07/HallWayEnd_HaveEnemy.unity"
-    guid: ad785020efc98714aa828146d4fd29d2
-  - enabled: 1
-    path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E19\u0E32\u0E0F\u0E28\u0E34\u0E25\u0E1B\u0E4C/DanceRoom6
-      \u0E04\u0E38\u0E22\u0E01\u0E31\u0E1A\u0E23\u0E34\u0E19\u0E41\u0E25\u0E49\u0E27
-      \u0E41\u0E15\u0E48\u0E23\u0E35\u0E40\u0E01\u0E21\u0E43\u0E2B\u0E21\u0E48\u0E2B\u0E25\u0E31\u0E07\u0E42\u0E14\u0E19\u0E08\u0E31\u0E1A.unity"
-    guid: 1fefef6ea39972f4c92f5913aa6de45a
-  - enabled: 1
-    path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E40\u0E01\u0E47\u0E1A\u0E02\u0E2D\u0E07/StorageRoom.unity"
-    guid: 90c713e3609ab9248a7b65588fcba238
-  - enabled: 1
-    path: "Assets/Scenes/\u0E42\u0E16\u0E07/HallWayEnd_HaveEnemy 1.unity"
-    guid: 261dd8a371d7de641b74e3c528d9c446
-  - enabled: 1
-    path: Assets/Scenes/EndScene.unity
-    guid: 6cd8e4df1d8280c4bbe669e7f14cebcf
-  - enabled: 1
-    path: "Assets/Scenes/\u0E42\u0E16\u0E07/HallWay2.unity"
-    guid: ecda418b8422bac4a84355ea719b668d
+    path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E1E\u0E22\u0E32\u0E1A\u0E32\u0E25/Nurse's.unity"
+    guid: 55ea45a04d787a94ba66dc9840dec498
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

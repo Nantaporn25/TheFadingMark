@@ -178,8 +178,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 62c4914c5aab2134b894f99a85f85ede, type: 2}
-  m_sharedMaterial: {fileID: -7940800114757149666, guid: 62c4914c5aab2134b894f99a85f85ede, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d760b5f0b29eed744bdcf6000c94b0ba, type: 2}
+  m_sharedMaterial: {fileID: 8504516444131926473, guid: d760b5f0b29eed744bdcf6000c94b0ba, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -213,7 +213,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -341,6 +341,7 @@ GameObject:
   - component: {fileID: 456763079}
   - component: {fileID: 456763078}
   - component: {fileID: 456763077}
+  - component: {fileID: 456763080}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -422,6 +423,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &456763080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456763076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!1 &863652771
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,8 +674,9 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1790660552}
   sentences:
   - "\u0E17\u0E33\u0E44\u0E21 .."
-  - "\u0E17\u0E33\u0E44\u0E21\u0E40\u0E18\u0E2D "
-  - "\u0E17\u0E33\u0E44\u0E21\u0E40\u0E18\u0E2D\u0E16\u0E36\u0E07\u0E44\u0E21\u0E48\u0E23\u0E31\u0E1A\u0E2A\u0E32\u0E22\u0E09\u0E31\u0E19\u0E25\u0E48\u0E30.."
+  - "\u0E17\u0E33\u0E44\u0E21\u0E40\u0E18\u0E2D"
+  - "\u0E17\u0E33\u0E44\u0E21\u0E40\u0E18\u0E2D\u0E44\u0E21\u0E48\u0E23\u0E31\u0E1A\u0E2A\u0E32\u0E22\u0E09\u0E31\u0E19\u0E25\u0E48\u0E30
+    ..?"
   nextSceneName: HallWay1
   sceneFader: {fileID: 1342198723}
   typingSpeed: 0.05
@@ -661,7 +707,7 @@ RectTransform:
   m_GameObject: {fileID: 1790660552}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.05, y: 1.05, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 371762506}

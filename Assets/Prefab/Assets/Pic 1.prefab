@@ -149,11 +149,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData:
-    itemName: Pic 1
+    itemName: Picture Scraps1
     icon: {fileID: -4733906239258030868, guid: 36e48d6d7a8bf864d88e098f0ad0216a, type: 3}
     colorName: 
+    worldSprite: {fileID: 0}
   isPaper: 0
-  paperSprite: {fileID: 0}
+  paperSprites: []
+  isPoster: 0
+  posterSprite: {fileID: 0}
 --- !u!114 &5679533531630434405
 MonoBehaviour:
   m_ObjectHideFlags: 0
