@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.0500007, y: -6.77, z: 0}
-  m_LocalScale: {x: 0.46967, y: 0.46967, z: 0.46967}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 8
   m_Sprite: {fileID: 3560218058874121544, guid: d88009013c9c245468e1705e219ffb31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -155,9 +155,6 @@ MonoBehaviour:
     worldSprite: {fileID: 0}
   isPaper: 1
   paperSprites:
-  - {fileID: 5478568134312263399, guid: bf2db901a5d72f64eb381d33c57ae5fa, type: 3}
-  - {fileID: 2442496851244246278, guid: c92aebdf84d6f4447ab37ee6f2c2713e, type: 3}
-  - {fileID: -9136781501942778630, guid: 211b0b32ada252e43b966908cde0e7e3, type: 3}
   - {fileID: -2309230201115777967, guid: 88a33f14a999de7499c3ba6ff6095f6f, type: 3}
   - {fileID: -1944392581606674137, guid: d9c7901a91935954eabc946842abe174, type: 3}
   isPoster: 0

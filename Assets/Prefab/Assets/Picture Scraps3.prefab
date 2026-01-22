@@ -124,7 +124,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.07984114, y: 0.8209931}
+  m_Offset: {x: 0.1779136, y: -0.24690723}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -134,7 +134,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.745842, y: 2.0919862}
+  m_Size: {x: 1.9419869, y: 3.1380925}
   m_EdgeRadius: 0
 --- !u!114 &5313935020655436515
 MonoBehaviour:
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemData:
     itemName: Picture Scraps2
-    icon: {fileID: 2946571656680233816, guid: 36e48d6d7a8bf864d88e098f0ad0216a, type: 3}
+    icon: {fileID: -5586841477615857476, guid: 36e48d6d7a8bf864d88e098f0ad0216a, type: 3}
     colorName: 
     worldSprite: {fileID: 0}
   isPaper: 0
