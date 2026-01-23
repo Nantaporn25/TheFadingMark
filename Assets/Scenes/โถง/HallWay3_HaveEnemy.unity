@@ -1443,6 +1443,8 @@ MonoBehaviour:
   panel: {fileID: 578825158}
   itemImage: {fileID: 455592875}
   itemNameText: {fileID: 1689201027}
+  audioSource: {fileID: 0}
+  popupSFX: {fileID: 0}
   dialogueUI: {fileID: 0}
 --- !u!1 &263267211
 GameObject:

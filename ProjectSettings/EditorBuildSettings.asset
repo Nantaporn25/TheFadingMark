@@ -60,6 +60,12 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/\u0E42\u0E16\u0E07/HallWay7.unity"
     guid: d20a6b84bba3bf3489264306d4a2de3f
+  - enabled: 1
+    path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E19\u0E32\u0E0F\u0E28\u0E34\u0E25\u0E1B\u0E4C/DanceRoom2.unity"
+    guid: eb3a581ac58107c4597e8c2efafd3e4c
+  - enabled: 1
+    path: Assets/Scenes/MiniGame.unity
+    guid: fbd971bc99195ad4e8201ffdb9ed0a14
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

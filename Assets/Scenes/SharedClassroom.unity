@@ -795,6 +795,8 @@ MonoBehaviour:
   panel: {fileID: 1351303240}
   itemImage: {fileID: 1734149626}
   itemNameText: {fileID: 1407711617}
+  audioSource: {fileID: 0}
+  popupSFX: {fileID: 0}
   dialogueUI: {fileID: 801021106}
 --- !u!1 &72668377
 GameObject:
@@ -1890,7 +1892,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8146296362143914549, guid: ae28ec31e1627e84890469e0accb7113, type: 3}
+  m_Sprite: {fileID: -6042224686218528557, guid: 4367d9f6be227384392705b2c3629cbe, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3179,7 +3181,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &362727187
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6679,7 +6681,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000

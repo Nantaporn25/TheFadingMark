@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData:
-    itemName: Picture Scraps2
+    itemName: Picture Scraps3
     icon: {fileID: -5586841477615857476, guid: 36e48d6d7a8bf864d88e098f0ad0216a, type: 3}
     colorName: 
     worldSprite: {fileID: 0}
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78fe6227c20e91540b46f81926faded0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Picture Scraps2
+  itemName: Picture Scraps3
   icon: {fileID: 9130784884593591570, guid: 1f5583324dd58d14a802ce04949085d2, type: 3}
   alertIcon: {fileID: 0}
   isPlayerNearby: 0

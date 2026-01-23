@@ -167,4 +167,20 @@ public class InventoryManager : MonoBehaviour
                 leftHighlights[i].enabled = false;
         }
     }
+
+    //โค้ดใหม่
+    public bool RemoveSelectedItem()
+    {
+        if (selectedIndex < 0) return false;
+        if (leftItems[selectedIndex] == null) return false;
+
+        leftItems[selectedIndex] = null;
+        UpdateButtonIcon(selectedIndex);
+
+        ClearHighlights();
+        selectedIndex = -1;
+
+        return true;
+    }
+
 }
