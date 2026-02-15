@@ -28,15 +28,25 @@ public class MainMannequin : MonoBehaviour
     private bool dialogActive = false;
     private int dialogIndex = 0;
 
+    private bool alreadyCompleted = false;
+
     void Update()
     {
+        // 🔥 กด K เพื่อผ่านทันที (Debug)
+        if (!alreadyCompleted && Input.GetKeyDown(KeyCode.K))
+        {
+            alreadyCompleted = true;
+            ForceComplete();
+            return;
+        }
+
         // ผู้เล่นกด E เพื่อตรวจ
-        if (playerInRange && Input.GetKeyDown(KeyCode.E) && !dialogActive)
+        if (!alreadyCompleted && playerInRange && Input.GetKeyDown(KeyCode.E) && !dialogActive)
         {
             CheckAllMannequins();
         }
 
-        // กด Enter เพื่อไปประโยคถัดไป หรือปิดท้ายเพื่่อให้รางวัล
+        // ❗ อันนี้ต้องทำงานเสมอ แม้เควสเสร็จแล้ว
         if (dialogActive && Input.GetKeyDown(KeyCode.Return))
         {
             NextDialog();
@@ -131,5 +141,15 @@ public class MainMannequin : MonoBehaviour
             playerInRange = false;
             HideDialog();
         }
+    }
+
+    void ForceComplete()
+    {
+        alreadyCompleted = true;
+
+        if (correctDialogLines.Length > 0)
+            ShowDialog(correctDialogLines[0]);
+
+        GiveReward();
     }
 }

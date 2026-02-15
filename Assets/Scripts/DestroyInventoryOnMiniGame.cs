@@ -5,7 +5,7 @@ public class DestroyInventoryOnMiniGame : MonoBehaviour
 {
     void Start()
     {
-        InventoryManager inv = FindObjectOfType<InventoryManager>();
+        InventoryManager inv = FindFirstObjectByType<InventoryManager>();
         if (inv != null)
         {
             Destroy(inv.gameObject);

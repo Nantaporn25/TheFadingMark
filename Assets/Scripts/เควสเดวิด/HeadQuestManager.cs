@@ -12,6 +12,16 @@ public class HeadQuestManager : MonoBehaviour
 
     private int placedCount = 0;
 
+    private bool alreadyCompleted = false;
+
+    void Update()
+    {
+        if (!alreadyCompleted && Input.GetKeyDown(KeyCode.K))
+        {
+            ForceComplete();
+        }
+    }
+
     private void Awake()
     {
         instance = this;
@@ -20,12 +30,30 @@ public class HeadQuestManager : MonoBehaviour
 
     public void AddPlacedHead()
     {
+        if (alreadyCompleted) return;
+
         placedCount++;
 
         if (placedCount >= requiredHeads)
         {
+            alreadyCompleted = true;
+
+            if (rewardObject != null)
+            {
+                rewardObject.SetActive(true);
+                Debug.Log("✔ ครบ " + requiredHeads + " หัวแล้ว! เปิด reward");
+            }
+        }
+    }
+    void ForceComplete()
+    {
+        alreadyCompleted = true;
+        placedCount = requiredHeads;   // ทำให้ครบตามเงื่อนไข
+
+        if (rewardObject != null)
+        {
             rewardObject.SetActive(true);
-            Debug.Log("✔ ครบ " + requiredHeads + " หัวแล้ว! เปิด reward");
+            Debug.Log("🔥 Debug: เปิด reward ทันทีด้วยปุ่ม K");
         }
     }
 }

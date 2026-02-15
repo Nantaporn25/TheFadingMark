@@ -14,6 +14,10 @@ public class GridPushableTable : MonoBehaviour
     private bool isMoving = false;
     private Vector3 targetPos;
 
+    [Header("Sound")]
+    public AudioSource audioSource;
+    public AudioClip pushSound;
+
     void Update()
     {
         if (isMoving)
@@ -49,7 +53,14 @@ public class GridPushableTable : MonoBehaviour
         {
             targetPos = transform.position + moveDir;
             isMoving = true;
+
+            // 🔊 เล่นเสียงทุกครั้งที่เริ่มลากสำเร็จ
+            if (audioSource != null && pushSound != null)
+            {
+                audioSource.PlayOneShot(pushSound);
+            }
         }
+
     }
 
     private void CheckTargetPosition()

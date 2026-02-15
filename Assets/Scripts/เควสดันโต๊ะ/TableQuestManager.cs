@@ -37,6 +37,14 @@ public class TableQuestManager : MonoBehaviour
     {
         if (questCompleted) return;
 
+        // ✅ กด K เพื่อจบเควสทันที
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            questCompleted = true;
+            TriggerQuestComplete();
+            return; // ออกจาก Update เลย
+        }
+
         bool allPlaced = true;
 
         foreach (var table in tables)
