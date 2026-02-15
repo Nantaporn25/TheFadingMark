@@ -4848,7 +4848,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0
+  m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -9939,6 +9939,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1780737976}
   - component: {fileID: 1780737975}
+  - component: {fileID: 1780737978}
+  - component: {fileID: 1780737977}
   m_Layer: 0
   m_Name: Up
   m_TagString: Untagged
@@ -10016,6 +10018,68 @@ Transform:
   m_Children: []
   m_Father: {fileID: 842335333}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1780737977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780737974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78fe6227c20e91540b46f81926faded0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: 
+  icon: {fileID: 8952572903667238001, guid: bfcbde424a4193d4d89dbe72a3dd1ec7, type: 3}
+  alertIcon: {fileID: 1067853340920493944}
+  isPlayerNearby: 0
+--- !u!61 &1780737978
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780737974}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -2.5243797}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.4, y: 16.2}
+    newSize: {x: 5.4, y: 16.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 5.4, y: 21.24876}
+  m_EdgeRadius: 0
 --- !u!1 &1787032043
 GameObject:
   m_ObjectHideFlags: 0
@@ -11809,6 +11873,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4329612071349414579, guid: 77259ea82ec956143a28236fd563d3ee, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4817882422684868962, guid: 77259ea82ec956143a28236fd563d3ee, type: 3}
       propertyPath: m_Name
       value: Cream
@@ -11818,6 +11886,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77259ea82ec956143a28236fd563d3ee, type: 3}
+--- !u!1 &1067853340920493944 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3071808910898520626, guid: 77259ea82ec956143a28236fd563d3ee, type: 3}
+  m_PrefabInstance: {fileID: 1067853340920493943}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
