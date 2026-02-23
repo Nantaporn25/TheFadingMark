@@ -51,8 +51,7 @@ EditorBuildSettings:
     path: Assets/Scenes/DrowingRoom.unity
     guid: 18c236607286bfd43aeaec045f50d3ce
   - enabled: 1
-    path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E40\u0E25\u0E04\u0E40\u0E0A\u0E2D\u0E23\u0E37/LectureRoom
-      1.unity"
+    path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E40\u0E25\u0E04\u0E40\u0E0A\u0E2D\u0E23\u0E37/LectureRoom2.unity"
     guid: b2ebeaa7cf8bf7943815de99d103b6f6
   - enabled: 1
     path: "Assets/Scenes/\u0E42\u0E16\u0E07/HallWay6.unity"

@@ -12441,6 +12441,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Picture Scraps1
       objectReference: {fileID: 0}
+    - target: {fileID: 5679533531630434405, guid: b50925f071c254341915223275ec6577, type: 3}
+      propertyPath: alertIcon
+      value: 
+      objectReference: {fileID: 557223399}
     - target: {fileID: 8518902856044165665, guid: b50925f071c254341915223275ec6577, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.5561302

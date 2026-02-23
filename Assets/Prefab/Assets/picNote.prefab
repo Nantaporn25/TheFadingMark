@@ -155,6 +155,8 @@ MonoBehaviour:
     worldSprite: {fileID: 0}
   isPaper: 1
   paperSprites:
+  - {fileID: 5478568134312263399, guid: bf2db901a5d72f64eb381d33c57ae5fa, type: 3}
+  - {fileID: 2442496851244246278, guid: c92aebdf84d6f4447ab37ee6f2c2713e, type: 3}
   - {fileID: -2309230201115777967, guid: 88a33f14a999de7499c3ba6ff6095f6f, type: 3}
   - {fileID: -1944392581606674137, guid: d9c7901a91935954eabc946842abe174, type: 3}
   isPoster: 0
