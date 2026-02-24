@@ -736,7 +736,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: ce7f8e7feef3ac84f96544a03e6622e6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.4
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -834,7 +834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2883135373945263910}
   moveThreshold: 0.1
-  footstepVolume: 0.15
+  footstepVolume: 0.8
   useFade: 1
   fadeSpeed: 3
 --- !u!1 &5180173360953667471

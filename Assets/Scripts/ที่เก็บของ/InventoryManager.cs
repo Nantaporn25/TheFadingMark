@@ -183,4 +183,15 @@ public class InventoryManager : MonoBehaviour
         return true;
     }
 
+    //โค้ดใหม่วางกุญแจ
+    public string GetSelectedItemName()
+    {
+        if (selectedIndex >= 0 && selectedIndex < leftItems.Length)
+        {
+            return leftItems[selectedIndex].itemName;
+        }
+
+        return "";
+    }
+
 }
