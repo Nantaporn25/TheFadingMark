@@ -300,6 +300,8 @@ MonoBehaviour:
   panel: {fileID: 1459233107}
   itemImage: {fileID: 1773986837}
   itemNameText: {fileID: 2145460599}
+  audioSource: {fileID: 0}
+  popupSFX: {fileID: 0}
   dialogueUI: {fileID: 503182522}
 --- !u!1 &29834982
 GameObject:
@@ -4084,7 +4086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b2d794b5203b7241b27b8604fdc0e29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneBuildIndex: 14
+  sceneBuildIndex: 37
 --- !u!61 &568922660
 BoxCollider2D:
   m_ObjectHideFlags: 0

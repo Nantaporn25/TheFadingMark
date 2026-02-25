@@ -115,6 +115,15 @@ EditorBuildSettings:
     path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E19\u0E32\u0E0F\u0E28\u0E34\u0E25\u0E1B\u0E4C/DanceRoom6
       \u0E04\u0E38\u0E22\u0E01\u0E31\u0E1A\u0E23\u0E34\u0E19 \u0E2B\u0E25\u0E31\u0E07\u0E42\u0E14\u0E19\u0E08\u0E31\u0E1A.unity"
     guid: 770301288315e2744a2cc170b25302e5
+  - enabled: 1
+    path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E40\u0E01\u0E47\u0E1A\u0E02\u0E2D\u0E07/StorageRoom.unity"
+    guid: 90c713e3609ab9248a7b65588fcba238
+  - enabled: 1
+    path: "Assets/Scenes/\u0E42\u0E16\u0E07/HallWayEnd_HaveEnemy 1.unity"
+    guid: 261dd8a371d7de641b74e3c528d9c446
+  - enabled: 1
+    path: "Assets/Scenes/\u0E0B\u0E35\u0E19\u0E08\u0E1A/EndScene 1.unity"
+    guid: c9b32f11092d647468bedf2c3836b5ea
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
