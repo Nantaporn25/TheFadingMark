@@ -551,7 +551,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 181738712}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acb21f244426b9341b401b24e9055a0e, type: 3}
   m_Name: 
@@ -2955,8 +2955,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 886529723}
   fadeCanvas: {fileID: 1346644345}
-  menuSceneName: "DanceRoom6 \u0E04\u0E38\u0E22\u0E01\u0E31\u0E1A\u0E23\u0E34\u0E19\u0E41\u0E25\u0E49\u0E27
-    \u0E41\u0E15\u0E48\u0E23\u0E35\u0E40\u0E01\u0E21\u0E43\u0E2B\u0E21\u0E48\u0E2B\u0E25\u0E31\u0E07\u0E42\u0E14\u0E19\u0E08\u0E31\u0E1A"
+  menuSceneName: "DanceRoom6 \u0E04\u0E38\u0E22\u0E01\u0E31\u0E1A\u0E23\u0E34\u0E19
+    \u0E2B\u0E25\u0E31\u0E07\u0E42\u0E14\u0E19\u0E08\u0E31\u0E1A"
   fadeDuration: 1.5
 --- !u!1 &1601861644
 GameObject:

@@ -1670,15 +1670,10 @@ MonoBehaviour:
   dialogueText: {fileID: 464669578}
   dialogueImage: {fileID: 853646135}
   lines:
-  - "\u0E2B\u0E49\u0E2D\u0E07\u0E21\u0E31\u0E19\u0E42\u0E14\u0E19\u0E25\u0E47\u0E2D\u0E01\u0E2D\u0E22\u0E39\u0E48"
-  - "\u0E16\u0E49\u0E49\u0E32\u0E08\u0E33\u0E44\u0E21\u0E48\u0E1C\u0E34\u0E14\u0E01\u0E38\u0E0D\u0E41\u0E08\u0E02\u0E2D\u0E07\u0E41\u0E15\u0E48\u0E07\u0E15\u0E31\u0E27\u0E2D\u0E22\u0E39\u0E48\u0E17\u0E35\u0E48\u0E2B\u0E49\u0E2D\u0E07\u0E1B\u0E23\u0E30\u0E0A\u0E38\u0E21\u0E0A\u0E31\u0E49\u0E19
-    2"
-  - "\u0E23\u0E35\u0E1A\u0E44\u0E1B\u0E40\u0E2D\u0E32\u0E01\u0E38\u0E0D\u0E41\u0E08\u0E17\u0E35\u0E48\u0E2B\u0E49\u0E2D\u0E07\u0E1B\u0E23\u0E30\u0E0A\u0E38\u0E21\u0E14\u0E35\u0E01\u0E27\u0E48\u0E32 "
+  - "\u0E44\u0E21\u0E48\u0E08\u0E33\u0E40\u0E1B\u0E47\u0E19\u0E15\u0E49\u0E2D\u0E07\u0E44\u0E1B\u0E2B\u0E49\u0E2D\u0E07\u0E19\u0E35\u0E49\u0E41\u0E25\u0E49\u0E27"
   images:
-  - {fileID: 9117568155933292517, guid: 147b8337ac3f03b4d84cc5a2df0e632a, type: 3}
   - {fileID: 6773384493843960612, guid: cfc705e13a2b91145ac16179cad061f3, type: 3}
-  - {fileID: 6773384493843960612, guid: cfc705e13a2b91145ac16179cad061f3, type: 3}
-  typingSpeed: 0.05
+  typingSpeed: 0.04
 --- !u!61 &424814159
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1859,6 +1854,8 @@ MonoBehaviour:
   panel: {fileID: 1589975156}
   itemImage: {fileID: 1585953830}
   itemNameText: {fileID: 271256401}
+  audioSource: {fileID: 0}
+  popupSFX: {fileID: 0}
   dialogueUI: {fileID: 0}
 --- !u!1 &456252600
 GameObject:
@@ -4187,7 +4184,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0
+  m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -4503,7 +4500,7 @@ GameObject:
   m_Layer: 0
   m_Name: "\u0E22\u0E49\u0E32\u0E22"
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -4516,7 +4513,7 @@ Transform:
   m_GameObject: {fileID: 765225759}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.13, y: -6.15, z: 0}
+  m_LocalPosition: {x: 10.07, y: -6.15, z: 0}
   m_LocalScale: {x: 0.33512402, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4534,7 +4531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b2d794b5203b7241b27b8604fdc0e29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneBuildIndex: 11
+  sceneBuildIndex: 34
 --- !u!61 &765225762
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7434,7 +7431,7 @@ MonoBehaviour:
   lines:
   - "\u0E40\u0E18\u0E2D\u0E15\u0E49\u0E2D\u0E07\u0E44\u0E1B\u0E2B\u0E49\u0E2D\u0E07\u0E40\u0E01\u0E47\u0E1A\u0E02\u0E2D\u0E07\u0E19\u0E30"
   images:
-  - {fileID: 955943864797572632, guid: d2aadcd3bbd67084a9b46a523daa1adc, type: 3}
+  - {fileID: 2593609333162183363, guid: d87493d4d8bc54d47afe9c7883dd7e54, type: 3}
   typingSpeed: 0.05
 --- !u!61 &1148714879
 BoxCollider2D:
@@ -12122,7 +12119,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.33, y: 2.43}
+    oldSize: {x: 1.32, y: 2.5}
     newSize: {x: 1.33, y: 2.43}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -12174,7 +12171,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 6083499493952701699, guid: e9935aeabd286654e97b9421b76d36fe, type: 3}
+  m_Sprite: {fileID: 8900200770461833389, guid: 2ae5daca627494b4993fa6c631a91cb9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

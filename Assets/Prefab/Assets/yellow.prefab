@@ -154,7 +154,9 @@ MonoBehaviour:
     colorName: yellow
     worldSprite: {fileID: -3476097969488877061, guid: 919c366aa5181fd49b3e872fdf4e1742, type: 3}
   isPaper: 0
-  paperSprite: {fileID: 0}
+  paperSprites: []
+  isPoster: 0
+  posterSprite: {fileID: 0}
 --- !u!114 &5682591334233314675
 MonoBehaviour:
   m_ObjectHideFlags: 0

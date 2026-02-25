@@ -89,6 +89,32 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23\u0E27\u0E21/SharedClassroomFi.unity"
     guid: 6c5e5e6bea54601409122b649104264c
+  - enabled: 1
+    path: "Assets/Scenes/\u0E42\u0E16\u0E07/HallWay10.unity"
+    guid: 10ed90fd2a292c14f95be6238c9706a1
+  - enabled: 1
+    path: "Assets/Scenes/\u0E42\u0E16\u0E07/HallWay11.unity"
+    guid: 72edec72ce263d144b24a4a466fe6606
+  - enabled: 1
+    path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E19\u0E32\u0E0F\u0E28\u0E34\u0E25\u0E1B\u0E4C/DanceRoom4.unity"
+    guid: 2fee88a882f21704b8c920e87d07c554
+  - enabled: 1
+    path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E41\u0E15\u0E48\u0E07\u0E15\u0E31\u0E27/DressingRoom1.unity"
+    guid: 023811dea5de9c844845878aec743ca9
+  - enabled: 1
+    path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E19\u0E32\u0E0F\u0E28\u0E34\u0E25\u0E1B\u0E4C/DanceRoom5.unity"
+    guid: efc430dbc493c704b8e3fedde3c47899
+  - enabled: 1
+    path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E19\u0E32\u0E0F\u0E28\u0E34\u0E25\u0E1B\u0E4C/DanceRoom6
+      \u0E04\u0E38\u0E22\u0E01\u0E31\u0E1A\u0E23\u0E34\u0E19.unity"
+    guid: 68dc5a3a8c6a30a4d8f1e251e955443d
+  - enabled: 1
+    path: "Assets/Scenes/\u0E42\u0E16\u0E07/HallWayEnd_HaveEnemy.unity"
+    guid: ad785020efc98714aa828146d4fd29d2
+  - enabled: 1
+    path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E19\u0E32\u0E0F\u0E28\u0E34\u0E25\u0E1B\u0E4C/DanceRoom6
+      \u0E04\u0E38\u0E22\u0E01\u0E31\u0E1A\u0E23\u0E34\u0E19 \u0E2B\u0E25\u0E31\u0E07\u0E42\u0E14\u0E19\u0E08\u0E31\u0E1A.unity"
+    guid: 770301288315e2744a2cc170b25302e5
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

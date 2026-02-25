@@ -21,8 +21,11 @@ public class MainMannequin : MonoBehaviour
     [TextArea(2, 3)]
     public string[] correctDialogLines;
 
-    [Header("วัตถุรางวัล (ปิดไว้ก่อนใน Inspector)")]
-    public GameObject rewardObject;
+    //[Header("วัตถุรางวัล (ปิดไว้ก่อนใน Inspector)")]
+    //public GameObject rewardObject;
+
+    [Header("วัตถุรางวัลทั้งหมด (ปิดไว้ก่อนใน Inspector)")]
+    public GameObject[] rewardObjects;
 
     private bool playerInRange = false;
     private bool dialogActive = false;
@@ -92,12 +95,26 @@ public class MainMannequin : MonoBehaviour
     }
 
     // ---------------------- แสดงรางวัล ----------------------
+    //void GiveReward()
+    //{
+    //    if (rewardObject != null)
+    //    {
+    //        rewardObject.SetActive(true);   // ← ปรากฎรางวัลหลังประโยคสุดท้าย
+    //        Debug.Log("🎉 รางวัลปรากฎแล้ว!");
+    //    }
+    //}
+
     void GiveReward()
     {
-        if (rewardObject != null)
+        if (rewardObjects == null || rewardObjects.Length == 0) return;
+
+        foreach (GameObject reward in rewardObjects)
         {
-            rewardObject.SetActive(true);   // ← ปรากฎรางวัลหลังประโยคสุดท้าย
-            Debug.Log("🎉 รางวัลปรากฎแล้ว!");
+            if (reward != null)
+            {
+                reward.SetActive(true);
+                Debug.Log("🎁 เปิดรางวัล: " + reward.name);
+            }
         }
     }
 
@@ -152,4 +169,5 @@ public class MainMannequin : MonoBehaviour
 
         GiveReward();
     }
+
 }

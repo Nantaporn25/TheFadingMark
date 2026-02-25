@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
 
-public class PlacePoint : MonoBehaviour
+public class PlacePointSimple : MonoBehaviour
 {
-    public int targetBuildIndex = 2;
-
     private bool playerInRange = false;
 
     void OnTriggerEnter2D(Collider2D other)
@@ -23,10 +21,10 @@ public class PlacePoint : MonoBehaviour
         if (!playerInRange) return;
 
         if (Input.GetKeyDown(KeyCode.E))
-            TryPlaceKeyNecklace();
+            TryPlaceItem();
     }
 
-    void TryPlaceKeyNecklace()
+    void TryPlaceItem()
     {
         InventoryManager inv = InventoryManager.instance;
         if (inv == null) return;
@@ -37,13 +35,10 @@ public class PlacePoint : MonoBehaviour
         Item item = inv.leftItems[index];
         if (item == null) return;
 
-        if (item.itemName != "เสื้อริน") return;
-
-        // เอาของออก
+        // ลบของออกจาก inventory
         inv.leftItems[index] = null;
         inv.UpdateButtonIcon(index);
 
-        // Fade → เปลี่ยนซีน
-        FadeSceneManager.instance.FadeToScene(targetBuildIndex);
+        Debug.Log("Placed item: " + item.itemName);
     }
 }
