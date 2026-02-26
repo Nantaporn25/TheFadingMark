@@ -2468,6 +2468,7 @@ MonoBehaviour:
   - MeetingRoom
   - HallWay8
   - Teacher'sRoom
+  - DressingRoom1
 --- !u!1 &408859717
 GameObject:
   m_ObjectHideFlags: 0

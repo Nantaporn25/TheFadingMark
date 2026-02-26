@@ -96,6 +96,12 @@ EditorBuildSettings:
     path: "Assets/Scenes/\u0E42\u0E16\u0E07/HallWay11.unity"
     guid: 72edec72ce263d144b24a4a466fe6606
   - enabled: 1
+    path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E40\u0E01\u0E47\u0E1A\u0E02\u0E2D\u0E07/StorageRoom.unity"
+    guid: 90c713e3609ab9248a7b65588fcba238
+  - enabled: 1
+    path: "Assets/Scenes/\u0E42\u0E16\u0E07/HallWay12.unity"
+    guid: cbad760b7f3f4044f8231b86ec64513c
+  - enabled: 1
     path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E19\u0E32\u0E0F\u0E28\u0E34\u0E25\u0E1B\u0E4C/DanceRoom4.unity"
     guid: 2fee88a882f21704b8c920e87d07c554
   - enabled: 1
@@ -116,8 +122,9 @@ EditorBuildSettings:
       \u0E04\u0E38\u0E22\u0E01\u0E31\u0E1A\u0E23\u0E34\u0E19 \u0E2B\u0E25\u0E31\u0E07\u0E42\u0E14\u0E19\u0E08\u0E31\u0E1A.unity"
     guid: 770301288315e2744a2cc170b25302e5
   - enabled: 1
-    path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E40\u0E01\u0E47\u0E1A\u0E02\u0E2D\u0E07/StorageRoom.unity"
-    guid: 90c713e3609ab9248a7b65588fcba238
+    path: "Assets/Scenes/\u0E2B\u0E49\u0E2D\u0E07\u0E40\u0E01\u0E47\u0E1A\u0E02\u0E2D\u0E07/StorageRoom
+      1.unity"
+    guid: 26f5ca2c88e21b247ad843e136c5761a
   - enabled: 1
     path: "Assets/Scenes/\u0E42\u0E16\u0E07/HallWayEnd_HaveEnemy 1.unity"
     guid: 261dd8a371d7de641b74e3c528d9c446
