@@ -23,10 +23,10 @@ public class PlacePoint : MonoBehaviour
         if (!playerInRange) return;
 
         if (Input.GetKeyDown(KeyCode.E))
-            TryPlaceKeyNecklace();
+            TryPlaceItem();
     }
 
-    void TryPlaceKeyNecklace()
+    void TryPlaceItem()
     {
         InventoryManager inv = InventoryManager.instance;
         if (inv == null) return;
@@ -37,7 +37,9 @@ public class PlacePoint : MonoBehaviour
         Item item = inv.leftItems[index];
         if (item == null) return;
 
-        if (item.itemName != "เสื้อริน") return;
+        // ✅ อนุญาต 2 ชิ้นนี้
+        if (item.itemName != "เสื้อริน" && item.itemName != "บัตรนักเรียน")
+            return;
 
         // เอาของออก
         inv.leftItems[index] = null;

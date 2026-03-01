@@ -115,5 +115,6 @@ public class TriggerDialogue2D_TwoPerson : MonoBehaviour
         dialoguePanel.SetActive(false);
         isTalking = false;
         player.canMove = true;
+        Destroy(gameObject); // ลบ Trigger ทิ้งหลังคุยจบ
     }
 }

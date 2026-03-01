@@ -2469,6 +2469,9 @@ MonoBehaviour:
   - HallWay8
   - Teacher'sRoom
   - DressingRoom1
+  - SharedClassroomFi
+  - SharedClassroom
+  - "DanceRoom6 \u0E04\u0E38\u0E22\u0E01\u0E31\u0E1A\u0E23\u0E34\u0E19"
 --- !u!1 &408859717
 GameObject:
   m_ObjectHideFlags: 0
@@ -5717,7 +5720,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0
+  m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
