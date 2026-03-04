@@ -1088,7 +1088,7 @@ MonoBehaviour:
   videoPlayer: {fileID: 2122526311}
   videoClips:
   - {fileID: 32900000, guid: 3f5abeaa7f5e20a46bf3573047afa428, type: 3}
-  - {fileID: 32900000, guid: 8c4ac0ad0ebf2394ba5028de74268e6a, type: 3}
+  - {fileID: 32900000, guid: bd8bd2760372df14e868db023bf2267f, type: 3}
   - {fileID: 32900000, guid: 14a04706bb3491243ab886c94d533fdd, type: 3}
   dialogueText: {fileID: 255199764}
   typingSpeed: 0.04
