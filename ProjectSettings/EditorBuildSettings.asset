@@ -19,7 +19,7 @@ EditorBuildSettings:
     guid: 6c631a04d8bc2be468229d39a7a0bcf7
   - enabled: 1
     path: "Assets/Scenes/\u0E09\u0E32\u0E01\u0E40\u0E1B\u0E34\u0E14/FadeThree.unity"
-    guid: c577bfbb7dc34c641ba15077f1e6a740
+    guid: f6f6d45363a55d640bb6f3e4684adb69
   - enabled: 1
     path: "Assets/Scenes/\u0E42\u0E16\u0E07/HallWay1.unity"
     guid: 0b75976b917e48247a953673540247d0
@@ -128,6 +128,9 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/\u0E42\u0E16\u0E07/HallWay15.unity"
     guid: 8cbf87f53daa04944895ad6879e12a30
+  - enabled: 1
+    path: "Assets/Scenes/\u0E09\u0E32\u0E01\u0E40\u0E1B\u0E34\u0E14/Fade5.unity"
+    guid: c577bfbb7dc34c641ba15077f1e6a740
   - enabled: 1
     path: "Assets/Scenes/\u0E0B\u0E35\u0E19\u0E08\u0E1A/EndScene 1.unity"
     guid: c9b32f11092d647468bedf2c3836b5ea

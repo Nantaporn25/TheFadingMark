@@ -4189,7 +4189,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &409973854
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13956,7 +13956,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -113.78284, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1380919430
@@ -19794,7 +19794,7 @@ PrefabInstance:
       objectReference: {fileID: 984561883}
     - target: {fileID: 8886392231677806461, guid: a6362e59113f5eb449792542cd701c94, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8886392231677806461, guid: a6362e59113f5eb449792542cd701c94, type: 3}
       propertyPath: moveSpeed
@@ -19815,7 +19815,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 2005738849}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acb21f244426b9341b401b24e9055a0e, type: 3}
   m_Name: 
