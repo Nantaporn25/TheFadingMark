@@ -4,7 +4,16 @@ public class PlacePoint : MonoBehaviour
 {
     public int targetBuildIndex = 2;
 
+    [Header("Sound")]
+    public AudioClip placeSound;
+    private AudioSource audioSource;
+
     private bool playerInRange = false;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -45,7 +54,13 @@ public class PlacePoint : MonoBehaviour
         inv.leftItems[index] = null;
         inv.UpdateButtonIcon(index);
 
-        // Fade → เปลี่ยนซีน
+        // 🔊 เล่นเสียงวาง
+        if (placeSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(placeSound);
+        }
+
+        // เปลี่ยนซีน
         FadeSceneManager.instance.FadeToScene(targetBuildIndex);
     }
 }

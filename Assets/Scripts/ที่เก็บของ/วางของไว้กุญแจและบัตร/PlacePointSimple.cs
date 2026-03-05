@@ -4,6 +4,15 @@ public class PlacePointSimple : MonoBehaviour
 {
     private bool playerInRange = false;
 
+    [Header("Sound")]
+    public AudioClip placeSound;
+    private AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -38,6 +47,12 @@ public class PlacePointSimple : MonoBehaviour
         // ลบของออกจาก inventory
         inv.leftItems[index] = null;
         inv.UpdateButtonIcon(index);
+
+        // เล่นเสียงตอนวาง
+        if (placeSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(placeSound);
+        }
 
         Debug.Log("Placed item: " + item.itemName);
     }

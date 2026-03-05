@@ -14,7 +14,11 @@ public class PaperManager : MonoBehaviour
     public Sprite defaultPaper;
 
     [Header("Page Number UI")]
-    public TextMeshProUGUI pageNumberText;   // <--- เพิ่มตัวเลขหน้า
+    public TextMeshProUGUI pageNumberText;
+
+    [Header("Sound")]
+    public AudioClip pageFlipSound;
+    private AudioSource audioSource;
 
     private List<Sprite> paperPages = new List<Sprite>();
     private int currentPage = 0;
@@ -27,6 +31,8 @@ public class PaperManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+
+            audioSource = GetComponent<AudioSource>();
 
             if (paperUI != null) paperUI.SetActive(false);
             if (paperIcon != null) paperIcon.enabled = false;
@@ -92,6 +98,7 @@ public class PaperManager : MonoBehaviour
         if (currentPage < paperPages.Count - 1)
         {
             currentPage++;
+            PlayFlipSound();
             UpdatePage();
         }
     }
@@ -101,6 +108,7 @@ public class PaperManager : MonoBehaviour
         if (currentPage > 0)
         {
             currentPage--;
+            PlayFlipSound();
             UpdatePage();
         }
     }
@@ -113,10 +121,17 @@ public class PaperManager : MonoBehaviour
             paperImageUI.sprite = s;
         }
 
-        // --- อัปเดตหมายเลขหน้า ---
         if (pageNumberText != null)
         {
             pageNumberText.text = $"Page {currentPage + 1} / {paperPages.Count}";
+        }
+    }
+
+    void PlayFlipSound()
+    {
+        if (pageFlipSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(pageFlipSound);
         }
     }
 }

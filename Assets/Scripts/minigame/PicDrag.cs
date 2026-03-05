@@ -5,11 +5,16 @@ public class PicDrag : MonoBehaviour
     public Transform slot;   // Slot ของภาพ
     public bool locked = false;
 
+    [Header("Sound")]
+    public AudioClip placeSound;
+    private AudioSource audioSource;
+
     private Vector2 initialPosition;
 
     void Start()
     {
         initialPosition = transform.position;
+        audioSource = GetComponent<AudioSource>();
     }
 
     void OnMouseDrag()
@@ -29,6 +34,12 @@ public class PicDrag : MonoBehaviour
         {
             transform.position = slot.position;
             locked = true;
+
+            if (placeSound != null)
+            {
+                audioSource.PlayOneShot(placeSound);
+            }
+
             Debug.Log($"{name} locked!");
         }
         else

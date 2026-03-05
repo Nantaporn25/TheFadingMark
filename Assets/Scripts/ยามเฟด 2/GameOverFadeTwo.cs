@@ -10,8 +10,9 @@ public class GameOverFadeTwo : MonoBehaviour
     public GameObject gameOverUI;
     public CanvasGroup fadeCanvas;
 
-    //[Header("Audio")]
-    //public AudioSource sceneBGM;
+    [Header("Sound")]
+    public AudioClip caughtSound;
+    private AudioSource audioSource;
 
     [Header("Scene")]
     public string menuSceneName = " ";
@@ -26,6 +27,8 @@ public class GameOverFadeTwo : MonoBehaviour
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
+
+        audioSource = GetComponent<AudioSource>();
 
         gameOverUI.SetActive(false);
         fadeCanvas.alpha = 0f;
@@ -46,8 +49,11 @@ public class GameOverFadeTwo : MonoBehaviour
         isGameOver = true;
         gameOverUI.SetActive(true);
 
-        //if (sceneBGM != null)
-        //    sceneBGM.Stop();
+        // 🔊 เล่นเสียงตอนโดนจับ
+        if (caughtSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(caughtSound);
+        }
 
         Time.timeScale = 0f;
     }
