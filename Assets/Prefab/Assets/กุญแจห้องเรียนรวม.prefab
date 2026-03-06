@@ -104,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemData:
     itemName: "\u0E01\u0E38\u0E0D\u0E41\u0E08\u0E2B\u0E49\u0E2D\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23\u0E27\u0E21"
-    icon: {fileID: -3047920285825488638, guid: e127d68fa2717da46891e4533d699ca4, type: 3}
+    icon: {fileID: 4276550893347846221, guid: e64713e8961ebc44aa54e26d64b332f4, type: 3}
     colorName: 
     worldSprite: {fileID: 0}
   isPaper: 0
