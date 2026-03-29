@@ -2473,6 +2473,7 @@ MonoBehaviour:
   - SharedClassroom
   - "DanceRoom6 \u0E04\u0E38\u0E22\u0E01\u0E31\u0E1A\u0E23\u0E34\u0E19"
   - LectureRoom
+  - DanceRoom4
 --- !u!1 &408859717
 GameObject:
   m_ObjectHideFlags: 0
